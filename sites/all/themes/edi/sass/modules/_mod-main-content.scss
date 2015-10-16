@@ -1,0 +1,431 @@
+.mod-main-content {
+  font-size: 19px;
+
+  article {
+    @extend %border-1px;
+    padding-bottom: 40px;
+    margin-bottom: 55px;
+    overflow: hidden;
+
+    &.about-pilot-testing {
+      padding-bottom: 0;
+      border: 0;
+    }
+  }
+
+  .about-pilot-testing { margin-bottom: 0;}
+
+  .purposes-list {
+    padding-left: 20px;
+  }
+
+  .democracy-index,
+  .levels-list {
+    margin-top: 30px;
+  }
+
+  h2 {
+    margin: 35px 0;
+    font-size: 80px;
+    line-height: .8em;
+  }
+
+  h3 { margin-bottom: 20px;}
+
+  p { margin-top: 0;
+
+    &.center { text-align: center;}
+  }
+
+  ul { margin-top: 0;}
+
+  img {
+    @extend %centerx;
+    margin: 30px 0;
+    max-width: 100%;
+  }
+
+  .article-title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #469fd8;
+    font-weight: lighter;
+    font-size: 38px;
+    line-height: 1em;
+  }
+
+  .article-subtitle {
+    color: $color-12;
+    font-size: 27px;
+  }
+
+  .research-and-review-list {
+    list-style: decimal;
+    li { color: $color-1;}
+    p { color: $grey-3;}
+    span { font-weight: bold;}
+  }
+
+  .pilot-testing-list,
+  .research-and-review-list {
+    padding-left: 5px;
+    overflow: hidden;
+    list-style: lower-alpha;
+
+    li {
+      float: left;
+      width: 46%;
+      margin: 0 2%;
+      color: $color-1;
+
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+    }
+
+    p { color: $grey-3;}
+  }
+
+  .about-edi {
+    img { margin: 0;}
+  }
+
+  .about-edi-principles {
+    margin-bottom: 40px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+
+    .anchor {
+      display: block;
+      position: relative;
+      float: left;
+      width: 31.6%;
+      margin: 0 1%;
+      box-sizing: border-box;
+      height: 175px;
+      margin-bottom: 30px;
+      margin-top: 1px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, .25);
+
+      &:first-child { background: url('../images/index-map.png') no-repeat center 25px; margin-left: 1px;}
+
+      &:nth-child(2) { background: url('../images/index-methodology.png') no-repeat center 25px;}
+
+      &:nth-child(3) { background: url('../images/index-pilot-desing.png') no-repeat center 25px;}
+
+      &:hover {
+        border: 2px solid $color-11;
+        box-shadow: inset 0 0 2px rgba(155, 179, 0, .75);
+      }
+    }
+
+    span {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      left: 0;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: $grey-4;
+    }
+  }
+
+  .levels-list {
+    list-style: none;
+
+    li {  border-bottom: 1px dashed $grey-d;
+
+      &:last-child { border-bottom: 0;}
+    }
+  }
+
+  .levels {
+    padding: 30px 0;
+
+    h4 {
+      margin: 0;
+    }
+
+    span {
+      margin-top: 0;
+      font-size: normal;
+    }
+
+    p { margin: 0;}
+  }
+
+  .description,
+  .indicator-text {
+    width: 100% !important;
+  }
+
+  .indicator-text { font-weight: bold;}
+
+  button {
+    @include form-field-reset;
+  }
+
+  .small-row-100 {
+    display: flex;
+    align-content: stretch;
+
+    .small-grid-100 {
+      display: flex;
+      align-content: stretch;
+    }
+  }
+}
+
+.about-methodology {
+  img + p {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.about-the-index {
+  margin-bottom: 30px;
+}
+
+.call-to-action {
+  margin-top: 20px;
+}
+
+.call-to-action-btn {
+  @include form-input ($color-0, $grey-d, 15px);
+  display: block;
+  box-sizing: border-box;
+  // width: 100%;
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+  right: 30px;
+  color: $grey-4;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover { background-color: darken($color-0, 5);}
+
+  &.current {
+    background-color: $grey-a;
+    border-color: $grey-a;
+    color: $color-0;
+    pointer-events: none;
+  }
+}
+
+.our-partners-list {
+  padding-top: 10px;
+
+  div {
+    background-color: $grey-e;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .mod-main-content {
+    font-size: 16px;
+
+    h2 {
+      font-size: 64px;
+       margin: 25px 0;
+    }
+
+    .article-title { font-size: 34px;}
+
+    .article-subtitle {font-size: 23px;}
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .mod-main-content {
+
+    article {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+
+    .pilot-testing-list {
+      padding-left: 1%;
+
+      li {
+        width: 100%;
+      }
+    }
+
+    .research-and-review-list {
+      padding-left: 20px;
+
+      li {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    .about-edi-principles { margin-bottom: 0;}
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mod-main-content {
+    h2 {
+      margin-top: .75em;
+      margin-bottom: .75em;
+      font-size: 34px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 15px;
+    }
+
+    .pilot-testing-list,
+    .research-and-review-list {
+      padding-left: 20px;
+
+      li {
+        width: 98%;
+      }
+    }
+
+    .pilot-testing-list li {
+      width: 98%;
+    }
+
+    .about-edi-principles {
+      margin-bottom: 10px;
+
+    .anchor {
+        position: relative;
+        float: none;
+        width: 98%;
+        margin-bottom: 10px;
+        height: 100px;
+        padding: 0;
+        overflow: hidden;
+
+        &:first-child { background-position: 13% 50%;}
+
+        &:nth-child(2) { background-position: 13% 50%;}
+
+        &:nth-child(3) { background-position: 13% 50%;}
+
+        span {
+          position: absolute;
+          width: 42%;
+          right: 5%;
+          left: auto;
+          top: 50%;
+          transform: translatey(-50%);
+          -webkit-transform: translatey(-50%);
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .levels-list {
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    .levels {
+      padding: 10px 0;
+    }
+  }
+
+
+  .mod-guidelines ul {
+    padding-left: 0;
+  }
+
+  // .call-to-action-btn {
+  //   margin: .5em 0;
+  // }
+
+  #methodology-scoring-system img {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+//our-partners-list
+.page-node-12726 {
+  .view-content a {
+    display: block;
+  }
+
+  .view-content img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+
+  .views-field {
+    display: flex;
+    align-content: stretch;
+    margin: auto;
+  }
+
+  .field-content {
+    margin: auto;
+  }
+
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .views-row {
+      width: 10.6%;
+      margin: 2% 3%;
+      display: flex;
+      align-content: stretch;
+
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .view-content {
+
+      .views-row {
+        width: 14%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .view-content {
+
+      .views-row {
+        width: 19%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .view-content {
+
+      .views-row {
+        width: 44%;
+      }
+    }
+  }
+
+}
+

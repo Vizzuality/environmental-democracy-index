@@ -1,0 +1,147 @@
+<div class="layout-main-content">
+  <div class="row is-stretch">
+    {{#if info.doing-well}}
+    <div class="grid-6 small-grid-12 is-stretch">
+      <div class="mod-typs">
+        <div class="title doing-well">
+          <h3>What is this country doing well?</h3>
+        </div>
+        <p>{{{info.doing-well}}}</p>
+      </div>
+    </div>
+    {{/if}}
+    {{#if info.recommendations}}
+    <div class="grid-6 small-grid-12 is-stretch">
+      <div class="mod-typs">
+        <div class="title recomendations">
+          <h3>Where could this country improve?</h3>
+        </div>
+        <p>{{{info.recommendations}}}</p>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  <div class="row">
+    <div id="country-recommendations">
+      <div class="grid-12">
+        <div class="mod-typs">
+          <h3>Response of Government to EDI scores</h3>
+          {{#if info.govResponse}}
+            <div class="text-wrapper">
+              <p>{{{info.govResponse}}}</p>
+              <button class="btn-read-more is-hidden">Read more</button>
+              <button class="btn-read-less is-hidden">Read less</button>
+            </div>
+          {{else}}
+            <p>None received.</p>
+          {{/if}}
+          {{#if info.responseFile}}
+          <div class="row">
+            <div class="grid-5 offset-4 medium-grid-6 medium-offset-3">
+              <div class="download-data">
+                <div id="download-response"><a href="{{{info.responseFile}}}" class="btn-download">download government response</a></div>
+              </div>
+            </div>
+          </div>
+          {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-10 offset-1">
+      <p class="mod-add">Click on a Guideline to reveal its indicators. Click the question mark button to see the full text of the indicator. Click the info button to see the full response justifying the score, including sources, comments and discussion.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mod-legend">
+      <div class="grid-3 small-grid-6">
+        <div class="legend-score very-good">
+          <span></span>
+          Very good
+        </div>
+      </div>
+      <div class="grid-3 small-grid-6">
+        <div class="legend-score good">
+          <span></span>
+          Good / Yes (Practice)
+        </div>
+      </div>
+      <div class="grid-3 small-grid-6">
+        <div class="legend-score fair">
+          <span></span>
+          Fair / Limited (Practice)
+        </div>
+      </div>
+      <div class="grid-3 small-grid-6">
+        <div class="legend-score poor">
+          <span></span>
+          Poor / No (Practice)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-12">
+      <div class="mod-guidelines">
+
+        <ul class="guidelines-tabs">
+          {{#each pillars}}
+            <li><a href="#{{number}}" class="tab-link" data-id="{{number}}" id="pillar{{number}}">{{short}}</a></li>
+          {{/each}}
+        </ul>
+        {{#if guidelines}}
+          <ul class="guidelines-index">
+            {{#each guidelines}}
+              <li class="guidelines" data-number="{{this.number}}" id="guideline-{{this.number}}">
+                <a class="guideline" href="#"><span class="guideline-num">Guideline {{this.number}}:</span> {{this.guideline}}</a>
+                <div class="more-info-and-rrss">
+                  <a class="more-info more-info-guideline" href="#">?</a>
+                  {{!-- <a href="#" class="rrss"></a> --}}
+                </div>
+                <span class="score country-a {{this.roundScore}}">{{this.score}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-5 offset-4 medium-grid-6 medium-offset-3">
+      <a target="_blank" href="https://docs.google.com/forms/d/1OQV2eFCmzY-FhMDmDLJiumKVwrNugmNgpO0x8tmsum8/viewform" class="btn-form">FEEDBACK FORM</a>
+    </div>
+  </div>
+
+  <div class="row is-stretch">
+      <div class="grid-6 small-grid-12 is-stretch">
+        <div class="mod-typs">
+          <div class="title national-researchers">
+            <h3>National Researcher</h3>
+          </div>
+          {{#if info.researcher}}
+          <p>{{{info.researcher}}}</p>
+          {{else}}
+          <p>None received.</p>
+          {{/if}}
+        </div>
+      </div>
+      <div class="grid-6 small-grid-12 is-stretch">
+        <div class="mod-typs">
+          <div class="title national-reviewer">
+            <h3>National Reviewer</h3>
+          </div>
+          {{#if info.reviewer}}
+          <p>{{{info.reviewer}}}</p>
+          {{else}}
+          <p>None received.</p>
+          {{/if}}
+        </div>
+      </div>
+  </div>
+</div>

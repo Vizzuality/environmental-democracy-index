@@ -1,0 +1,205 @@
+<div class="row">
+  <div class="mod-legend">
+    <div class="grid-3 small-grid-6">
+      <div class="legend-score very-good">
+        <span></span>
+        Very good
+      </div>
+    </div>
+    <div class="grid-3 small-grid-6">
+      <div class="legend-score good">
+        <span></span>
+        Good / Yes (Practice)
+      </div>
+    </div>
+    <div class="grid-3 small-grid-6">
+      <div class="legend-score fair">
+        <span></span>
+        Fair / Limited (Practice)
+      </div>
+    </div>
+    <div class="grid-3 small-grid-6">
+      <div class="legend-score poor">
+        <span></span>
+        Poor / No (Practice)
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="mod-overview mod-country-detail">
+    <ul>
+      {{#if overalls.scoreA}}
+        <li class="grid-4 small-grid-12 is-stretch">
+          <div class="country-detail country-score">
+            <h2><a href="/country/{{overalls.countryA}}">{{../this.countriesNames.country-0}}</a></h2>
+            <div class="overall-score">
+              <h3>Overall</h3>
+              <div class="score {{scoreClassTemplateA}}">
+                <svg
+                  viewBox="0 0 90 90"
+                  perserveAspectRatio="xMinYMid">
+                  <g>
+                    <circle r="40" cx="45" cy="45" fill="#ffffff" stroke={{overalls.colorScoreA}} stroke-width="10"></circle>
+                    <text class="notranslate" x="45" y="55" fill="#000000" font-family="Segoe" font-size="30" text-anchor="middle">{{overalls.scoreA}}</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <h4>Pillars scores</h4>
+            <ul>
+              <li><p>Access to information</p><span class="pillar-score {{../roundScoresA.score-1}}">{{../pillarsCountryA.score-1}}</span></li>
+              <li><p>Public participation</p><span class="pillar-score {{../roundScoresA.score-2}}">{{../pillarsCountryA.score-2}}</span></li>
+              <li><p>Access to justice</p><span class="pillar-score {{../roundScoresA.score-3}}">{{../pillarsCountryA.score-3}}</span></li>
+            </ul>
+          </div>
+        </li>
+      {{/if}}
+      {{#if overalls.scoreB}}
+        <li class="grid-4 small-grid-12 is-stretch">
+          <div class="country-detail country-score">
+            <h2><a href="/country/{{overalls.countryB}}">{{../this.countriesNames.country-1}}</a></h2>
+            <div class="overall-score">
+              <h3>Overall</h3>
+              <div class="score {{scoreClassTemplateB}}">
+                <svg
+                  viewBox="0 0 90 90"
+                  perserveAspectRatio="xMinYMid">
+                  <g>
+                    <circle r="40" cx="45" cy="45" fill="#ffffff" stroke={{overalls.colorScoreB}} stroke-width="10"></circle>
+                    <text class="notranslate" x="45" y="55" fill="#000000" font-family="Segoe" font-size="30" text-anchor="middle">{{overalls.scoreB}}</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <h4>Pillars scores</h4>
+            <ul>
+              <li><p>Access to information</p><span class="pillar-score {{../roundScoresB.score-1}}">{{../pillarsCountryB.score-1}}</span></li>
+              <li><p>Public participation</p><span class="pillar-score {{../roundScoresB.score-2}}">{{../pillarsCountryB.score-2}}</span></li>
+              <li><p>Access to justice</p><span class="pillar-score {{../roundScoresB.score-3}}">{{../pillarsCountryB.score-3}}</span></li>
+            </ul>
+          </div>
+        </li>
+      {{/if}}
+      {{#if overalls.scoreC}}
+        <li class="grid-4 small-grid-12 is-stretch">
+          <div class="country-detail country-score">
+            <h2><a href="/country/{{overalls.countryC}}">{{../this.countriesNames.country-2}}</a></h2>
+            <div class="overall-score">
+              <h3>Overall</h3>
+              <div class="score {{scoreClassTemplateC}}">
+                <svg
+                  viewBox="0 0 90 90"
+                  perserveAspectRatio="xMinYMid">
+                  <g>
+                    <circle r="40" cx="45" cy="45" fill="#ffffff" stroke={{overalls.colorScoreC}} stroke-width="10"></circle>
+                    <text class="notranslate" x="45" y="55" fill="#000000" font-family="Segoe" font-size="30" text-anchor="middle">{{overalls.scoreC}}</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <h4>Pillars scores</h4>
+            <ul>
+              <li><p>Access to information</p><span class="pillar-score {{../roundScoresC.score-1}}">{{../pillarsCountryC.score-1}}</span></li>
+              <li><p>Public participation</p><span class="pillar-score {{../roundScoresC.score-2}}">{{../pillarsCountryC.score-2}}</span></li>
+              <li><p>Access to justice</p><span class="pillar-score {{../roundScoresC.score-3}}">{{../pillarsCountryC.score-3}}</span></li>
+            </ul>
+          </div>
+        </li>
+      {{/if}}
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="grid-10 offset-1">
+    <p class="mod-add">Click on a Guideline to reveal its indicators. Click the question mark button to see the full text of the indicator. Click the info button to see the full response justifying the score, including sources, comments and discussion.</p>
+  </div>
+</div>
+
+<div class="guideline-wrapper">
+  <div id="name-bar" class="row">
+    <div class="name-wrapper">
+      <div class="grid-6 small-grid-10">
+        <p>Scores comparison</p>
+      </div>
+      <div class="grid-6 small-grid-2">
+        <ul class="countries-name">
+          {{#if overalls.countryC}}
+            <li><a href="/country/{{overalls.countryC}}">{{overalls.countryC}}</a></li>
+          {{/if}}
+          {{#if overalls.countryB}}
+            <li><a href="/country/{{overalls.countryB}}">{{overalls.countryB}}</a></li>
+          {{/if}}
+          {{#if overalls.countryA}}
+            <li><a href="/country/{{overalls.countryA}}">{{overalls.countryA}}</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-12">
+      <div class="mod-guidelines">
+        <ul class="guidelines-tabs">
+          {{#each pillars}}
+            <li><a href="#{{number}}" class="tab-link">{{short}}</a></li>
+          {{/each}}
+        </ul>
+        <ul class="guidelines-index">
+          {{#each guidelines}}
+            <li class="guidelines" data-id="{{this.id}}" id="guideline-{{this.id}}">
+              <a class="guideline" href="#{{this.id}}"><span class="guideline-number" >Guideline {{this.id}}: </span> {{this.name}}</a>
+              <div class="more-info-and-rrss">
+                <a href="#" class="more-info more-info-guideline">?</a>
+              </div>
+              <div class="compare-scores">
+                {{#if scoreCountryA}}
+                  <span class="compare-score country-a {{roundScoreA}}">{{scoreCountryA}}</span>
+                {{/if}}
+                {{#if scoreCountryB}}
+                  <span class="compare-score country-b {{roundScoreB}}">{{scoreCountryB}}</span>
+                {{/if}}
+                {{#if scoreCountryC}}
+                  <span class="compare-score country-c {{roundScoreC}}">{{scoreCountryC}}</span>
+                {{/if}}
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="grid-4 offset-4">
+      <div id="print"><button class="btn-print-compare">PRINT YOUR REPORT</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div id="compareTotalScores" class="mod-country-detail">
+    <div class="grid-12">
+      <p class="color-title">practice total scores</p>
+    </div>
+    <div class="grid-4 small-grid-12">
+      <div id="scoresCountryA" class="country-detail country-figure mod-pie">
+        <div id="country-figure"></div>
+      </div>
+    </div>
+     <div class="grid-4 small-grid-12">
+      <div id="scoresCountryB" class="country-detail country-figure mod-pie">
+        <div id="country-figure"></div>
+      </div>
+    </div>
+    <div class="grid-4 small-grid-12">
+      <div id="scoresCountryC" class="country-detail country-figure mod-pie">
+        <div id="country-figure"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="cartodb-popup mod-infowindow">
+  <a href="#close" class="mod-infowindow-close close">x</a>
+  <div class="mod-infowindow-content">
+    <div class="title">
+      <h2>{{content.data.name}}</h2>
+      {{#if content.data.federal}}
+        <span class="federal-info">Federal country <button id="federalInfoBtn" class="btn-federal-info" onclick="showFederalInfo()">F</button></span>
+      {{/if}}
+    </div>
+
+    {{#ifCond content.data.type 'Practice'}}
+
+      {{#ifCond content.data.score 0}}
+        <span class="score {{round-score content.data.score}}">No</span>
+        <a href="/country/{{content.data.iso}}" class="btn-view-more">Go to country page</a>
+      {{/ifCond}}
+
+      {{#ifCond content.data.score 1}}
+        <span class="score {{round-score content.data.score}} limited">Limited</span>
+        <a href="/country/{{content.data.iso}}" class="btn-view-more">Go to country page</a>
+      {{/ifCond}}
+
+      {{#ifCond content.data.score 2}}
+        <span class="score {{round-score content.data.score}}">Yes</span>
+        <a href="/country/{{content.data.iso}}" class="btn-view-more">Go to country page</a>
+      {{/ifCond}}
+
+      {{else}}
+
+        {{#ifCond content.data.score 0}}
+          <span class="score {{round-score content.data.score}}">{{content.data.score}}</span>
+          <a href="/country/{{content.data.iso}}" class="btn-view-more">Go to country page</a>
+        {{else}}
+          {{#if content.data.score}}
+            <span class="score {{round-score content.data.score}}">{{content.data.score}}</span>
+            <a href="/country/{{content.data.iso}}" class="btn-view-more">Go to country page</a>
+          {{else}}
+            <span class="score">-</span>
+            <span class="no-data">No data for this country</span>
+            <a class="btn-view-more disabled">Go to country page</a>
+          {{/if}}
+        {{/ifCond}}
+
+    {{/ifCond}}
+  </div>
+</div>
+
+

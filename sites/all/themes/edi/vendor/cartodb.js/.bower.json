@@ -1,0 +1,14 @@
+{
+  "name": "cartodb.js",
+  "homepage": "https://github.com/CartoDB/cartodb.js",
+  "version": "3.10.0",
+  "_release": "3.10.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.10.0",
+    "commit": "c47f8747ca0eb08eaa6e7630dbf66d5788bac56e"
+  },
+  "_source": "git://github.com/CartoDB/cartodb.js.git",
+  "_target": "3.10.0",
+  "_originalSource": "cartodb.js"
+}

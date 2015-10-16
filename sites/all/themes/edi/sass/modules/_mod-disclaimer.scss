@@ -1,0 +1,19 @@
+.mod-disclaimer {
+
+  .wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .disclaimer-close {
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: $color-0;
+    background-color: $color-1;
+    border-radius: 15px;
+    font-weight: 400;
+  }
+}

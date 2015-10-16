@@ -1,0 +1,43 @@
+.page-node-568 {
+  .messages.error {
+    background: none;
+    border: 0;
+    color: #f00;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  #node-568 {
+    position: relative;
+    display: block;
+    max-width: 960px;
+    padding-top: 30px;
+    margin: 0 auto;
+
+    span { display: none;}
+
+  }
+
+  .field-name-body {
+    position: absolute;
+    width: 35%;
+    bottom: -7px;
+    left: 37%;
+
+    p { font-size: 15px;}
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  #node-568 {
+    .field-name-body {
+      width: 60%;
+      bottom: -7px;
+      left: 35px;
+    }
+  }
+
+}

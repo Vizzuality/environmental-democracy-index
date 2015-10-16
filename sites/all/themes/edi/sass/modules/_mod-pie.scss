@@ -1,0 +1,189 @@
+.mod-pie {
+  position: relative;
+  min-width: 30px;
+  min-height: 30px;
+
+  .mod-ranking & {
+    cursor: pointer;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+
+    .page-node-1708 & {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .chart-legend {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+
+    .page-node-1708 & {
+      transform: translate(-50%, -50%);
+    }
+
+    p {
+      margin: 0;
+      line-height: 1em;
+    }
+
+    a {
+      text-decoration: none;
+      color: $grey-4;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .title {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .score-0,
+    .score-1,
+    .score-2 {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+    }
+
+    .score-0 {
+      background-color: $color-12;
+      border: 0;
+    }
+    .score-1 {
+      background-color: $color-11;
+      border: 0;
+    }
+    .score-2 {
+      background-color: $color-10;
+      border: 0;
+    }
+
+    .score {
+      float: right;
+      text-align: right;
+    }
+  }
+
+  .mod-ranking & {
+    padding-left: 20px;
+
+    &:hover {
+      .chart-legend {
+        display: flex;
+      }
+    }
+
+    &.csspinner:after {
+      height: 20px;
+      width: 20px;
+      margin: -10px 0 0 -10px;
+    }
+
+    .chart-legend {
+      display: none;
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 150px;
+      height: 150px;
+      z-index: 2;
+      background-color: white;
+      bottom: 0;
+      right: 0;
+      transform: translate(-50%, -110%);
+      text-align: left;
+      padding: 20px;
+      border-radius: 4px;
+      border: 1px solid $grey-d;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .title {
+        font-size: 19px;
+        font-weight: 700;
+      }
+
+      .wrapper {
+        margin: auto;
+        width: 100%;
+      }
+
+      &:after {
+        content: '';
+        @include equi-triangle (10px, $color-0);
+        @extend %centerx;
+        position: absolute;
+        bottom: -10px;
+      }
+
+      &:before {
+        content: '';
+        @include equi-triangle (12px, $grey-d);
+        @extend %centerx;
+        position: absolute;
+        bottom: -12px;
+      }
+    }
+
+    @media screen and (max-width: 1120px) {
+      .chart-legend {
+        p {
+          font-size: 14px;
+        }
+
+        .title {
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      .chart-legend {
+        transform: translate(-60%, -110%);
+
+        &:after {
+          left: 60%;
+        }
+
+        &:before {
+          left: 60%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .chart-legend {
+        transform: translate(-78%, -110%);
+
+        &:after {
+          left: 78%;
+        }
+
+        &:before {
+          left: 78%;
+        }
+      }
+    }
+  }
+
+  @media print {
+    max-width: 8cm;
+  }
+}

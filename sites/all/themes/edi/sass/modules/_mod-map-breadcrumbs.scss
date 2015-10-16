@@ -1,0 +1,44 @@
+.mod-map-breadcrumbs {
+  display: none;
+  position: relative;
+  z-index: 100;
+  padding: 15px;
+  background-color: $color-0;
+  border-bottom: 5px solid $grey-d;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $grey-4;
+    border-left: 2px solid $grey-4;
+
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  span {
+    margin-right: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #454545;
+    display: inline-block;
+  }
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+  a {
+    color: #454545;
+  }
+}
+
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  .mod-map-breadcrumbs {
+    display: block;
+  }
+}

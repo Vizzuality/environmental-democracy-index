@@ -1,0 +1,89 @@
+.mod-landing-page {
+
+}
+
+.view-splash {
+  min-height: 430px;
+  background-image: url('../images/edi_landing_img.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.highlighted-text {
+  @extend %center;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid #DDD;
+  background: $color-0;
+
+  h2 {
+    @extend %center;
+    position: absolute;
+    width: 300px;
+    margin: auto;
+    color: #333;
+    font-size: 34px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 34px;
+    // background-color: $color-0;
+  }
+}
+
+.go-to-map-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 65px;
+  padding-top: 25px;
+  border-radius: 50%;
+  color: $color-0;
+  background-color: $color-1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tutorial-btn {
+  display: none !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  border: 1px solid #DDD;
+  background: $color-0;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-node-9979 .btn-more-info { display: none;}
+
+@media screen and (max-width: 640px) {
+  #block-views-splash-block {
+    min-height: 500px;
+  }
+
+  .highlighted-text {
+    width: 300px;
+    height: 300px;
+
+    p {
+      max-width: 90%;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  }
+}

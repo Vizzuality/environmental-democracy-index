@@ -1,0 +1,135 @@
+.mod-footer {
+  .btn-close {
+    @extend %form-field-reset;
+    @include cross (14px, 3px, $grey-4, 45deg, 26px, 26px);
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 1px solid $grey-d;
+    background-color: $color-0;
+    text-decoration: none;
+    font-size: 0;
+
+    &:after { left: 6px;}
+    &:before { left: 11px;}
+  }
+
+  .btn-more-info {
+    @extend %form-field-reset;
+    border-top: 1px solid $grey-d;
+    position: absolute;
+    top: -35px;
+    z-index: 1;
+    height: 35px;
+    width: 380px;
+    background-color: $color-6;
+
+    -webkit-transition-property: opacity;
+    -webkit-transition-delay: .5s;
+  }
+
+  .layout-footer-bottom {
+    a {
+      color: $grey-e;
+      font-weight: 200;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 200;
+
+      &:first-child { margin-top: 0;}
+
+      a:first-of-type { margin-right: 100px;}
+    }
+  }
+
+  .at-the-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    .vizzuality {
+      display: inline-block;
+      float: right;
+
+      a {
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      img {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+}
+
+.got-to-right {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-partners-btn {
+  @include btn ($color-00 !important, $color-0);
+  padding: 5px 15px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape){
+  .mod-footer .btn-close { display: block;}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+  .mod-footer .btn-close { display: block;}
+}
+
+@media screen and (max-width: 640px) {
+  .mod-footer .btn-close {
+    top: 5px;
+    z-index: 1;
+  }
+
+  .got-to-right {
+    float: none;
+    display: block;
+  }
+
+  .our-partners-btn {
+    display: none;
+  }
+
+  .mod-footer .layout-footer-bottom p a:first-of-type {
+    margin-right: 0px;
+  }
+
+  .mod-footer {
+    .at-the-bottom {
+      display: block;
+
+      p {
+        display: block;
+        margin-bottom: 1em;
+      }
+
+      .vizzuality {
+        display: block;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+}

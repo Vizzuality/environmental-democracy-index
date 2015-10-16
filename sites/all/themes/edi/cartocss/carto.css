@@ -1,0 +1,13 @@
+#map-fill {
+  polygon-fill: #999999;
+  polygon-opacity: 1;
+  line-color: #FFF;
+  line-width: 0.7;
+  line-opacity: 1;
+
+
+  [score <= 3] { polygon-fill: #42A1DF;}
+  [score <= 2.25] { polygon-fill: #AED8F9;}
+  [score <= 1.5] { polygon-fill: #F8E969;}
+  [score <= 0.75] { polygon-fill: #E1BD08;}
+}

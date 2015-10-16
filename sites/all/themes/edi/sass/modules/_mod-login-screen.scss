@@ -1,0 +1,26 @@
+.page-user {
+  h1 {
+    display: block;
+  }
+
+  .layout-main-content {
+    @extend .row;
+
+    .content {
+      @extend .grid-6;
+      @extend .medium-grid-12;
+    }
+  }
+
+  .tabs {
+    @extend .grid-12;
+    list-style: none;
+    padding-left: 0;
+
+    a {
+      text-decoration: none;
+      color: $color-2;
+    }
+  }
+
+}

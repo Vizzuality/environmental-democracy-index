@@ -1,0 +1,97 @@
+$container-max-width: 100%;
+$container-min-width: 0;
+
+$grid-columns: 12;
+$grid-gutter-width: 1%;
+
+.row {
+  max-width: 1120px;
+  display: block;
+  margin: 0 auto;
+
+  .row {
+    margin: 0 ($grid-gutter-width * -1);
+  }
+
+  @include clearfix();
+}
+
+%grid {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0 $grid-gutter-width;
+}
+
+@for $column from 1 through $grid-columns {
+  .grid-#{$column} {
+    @extend %grid;
+    @include grid($column);
+  }
+}
+
+@for $column from 1 through $grid-columns {
+  .offset-#{$column} {
+    margin-left: ((100%/$grid-columns)*$column + $grid-gutter-width);
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .row {
+    max-width: 92%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+  .row {
+    width: 96%;
+    max-width: none;
+  }
+
+  @for $column from 1 through $grid-columns {
+    .medium-grid-#{$column} {
+      @include grid($column);
+    }
+  }
+
+  @for $column from 1 through $grid-columns {
+    .medium-offset-#{$column} {
+      margin-left: ((100%/$grid-columns)*$column + $grid-gutter-width);
+    }
+
+    .medium-grid-offset-0 { margin-left: 1% !important;}
+    .medium-offset-0 { margin-left: 1% !important;}
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .row {
+    width: 94%;
+    margin: 0 3%;
+  }
+
+  @for $column from 1 through $grid-columns {
+    .small-grid-#{$column} {
+      @include grid($column);
+    }
+  }
+
+  .small-row-100 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .small-grid-100 {
+    width: 100%;
+    margin: 0;
+  }
+
+  @for $column from 1 through $grid-columns {
+    .small-offset-#{$column} {
+      margin-left: ((100%/$grid-columns)*$column + $grid-gutter-width);
+    }
+
+    .small-offset-0 { margin-left: 1%;}
+  }
+}

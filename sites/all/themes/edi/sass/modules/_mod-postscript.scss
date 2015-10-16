@@ -1,0 +1,106 @@
+.mod-postscript {
+  h2 { display: none;}
+
+  form { float: left;}
+
+  label {
+    position: static;
+    display: inline-block;
+    font-weight: 200;
+    margin-right: 30px;
+  }
+
+  #edit-submitted-validated-newsletter-email {
+    @extend %form-field-reset;
+
+    @include form-input ($color-0, $grey-d, 0 5px);
+
+    font-size: 13px;
+    font-weight: regular;
+    color: #7f7f7f;
+    box-sizing: border-box;
+    position: relative;
+    width: 190px;
+    height: 30px;
+  }
+
+  .webform-client-form { position: relative;}
+
+  .form-submit {
+    @extend %form-field-reset;
+    @include circle (24px, $color-1, 0, $color-1, solid);
+    position: absolute;
+    top: -27px;
+    right: 5px;
+
+    &[value] { font-size: 0;}
+  }
+
+  .form-wrapper {
+    position: relative;
+
+    &:before {
+      @include before(' ', block, absolute, auto, -21px, 0, 0);
+      z-index: 1;
+      right: 10px;
+      border-left: 6px solid $color-0;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      pointer-events: none;
+    }
+
+    &:after {
+      @include after(' ', block, absolute, 16px, 12px, 6px, 6px);
+      z-index: 1;
+      background-color: $color-0;
+      pointer-events: none;
+    }
+  }
+
+  .form-required { display: none;}
+
+  #block-easy-social-easy-social-block-1 { float: right;}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .mod-postscript {
+
+    .webform-client-form { width: 45%;}
+
+    #edit-submitted-validated-newsletter-email { width: 100%;}
+
+    #block-easy-social-easy-social-block-1 {
+      width: 50%;
+      margin-top: 25px;
+    }
+  }
+
+  .easy_social_box div.easy_social-widget  {
+    float: right;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .easy_social_box div.easy_social-widget {
+    float: none;
+  }
+  .mod-postscript {
+    #block-easy-social-easy-social-block-1 {
+      width: 30%;
+      margin-top: 0;
+    }
+
+    #block-webform-client-block-1706 {
+      width: 60%;
+    }
+
+    .webform-client-form {
+      width: 100%;
+    }
+
+    label {
+      font-size: 11px;
+    }
+  }
+}

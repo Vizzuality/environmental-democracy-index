@@ -1,0 +1,67 @@
+.mod-indicators-switcher {
+  position: relative;
+  z-index: 1;
+  padding: 10px 0;
+  text-align: center;
+  color: $grey-9;
+  background-color: $color-0;
+  border-bottom: 1px solid $grey-d;
+
+  label {
+    display: inline-block;
+    position: static;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 200;
+
+    &.is-selected {
+      color: $grey-4;
+    }
+  }
+
+  .checkbox-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 10px;
+    background-color: $color-1;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:before {
+      @extend %centery;
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 2px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-0;
+      transition: .3s ease-in;
+    }
+
+    input {
+      @include form-field-reset;
+      @extend %centery;
+      position: absolute;
+      right: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-1;
+    }
+
+    &.is-practice-mode {
+      &:before {
+        left: auto;
+        right: 2px;
+      }
+
+      input {
+        right: auto;
+        left: 2px;
+      }
+    }
+  }
+}

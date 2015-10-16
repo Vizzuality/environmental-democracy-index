@@ -1,0 +1,309 @@
+
+label { font-size: 19px;}
+
+#block-webform-client-block-568 h2 {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 0;
+  font-size: 80px;
+}
+
+#webform-client-form-568 {
+  position: relative;
+  max-width: 1120px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-weight: 200;
+}
+
+
+.page-node-1709 .layout-main-content,
+.page-user .layout-main-content {
+  .form-item {
+    height: 75px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &#webform-component-privacy-policy {
+      margin-bottom: 0;
+    }
+  }
+
+  .description {
+    position: absolute;
+    bottom: -20px;
+  }
+}
+
+
+
+#webform-component-name-and-surname,
+#webform-component-e-mail,
+#webform-component-website {
+  position: relative;
+  float: left;
+  width: 31.33333%;
+  margin: 0;
+}
+
+#edit-submitted-name-and-surname,
+#edit-submitted-e-mail,
+#edit-submitted-website,
+#edit-submitted-subject,
+#edit-submitted-message,
+#edit-name,
+#edit-pass {
+  @extend %form-field-reset;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 7px;
+  border: 1px solid $grey-d;
+  pointer-events: all;
+}
+
+#edit-name,
+#edit-pass {
+  width: 100%;
+}
+
+#edit-submitted-subject {
+  @extend %form-field-reset;
+  width: 100%;
+  pointer-events: all;
+}
+
+#webform-component-message {
+  min-height: 150px;
+  margin-bottom: 20px;
+  pointer-events: all;
+
+  label { top: 0;}
+}
+
+#webform-component-subject,
+#webform-component-message {
+  position: relative;
+  float: right;
+  width: 64.66667%;
+  pointer-events: all;
+}
+
+#edit-submitted-name-and-surname,
+#edit-submitted-e-mail,
+#edit-submitted-website {
+  width: 100%;
+}
+
+.page-user #edit-submit,
+.page-node-1709 #edit-submit, {
+  @extend %form-field-reset;
+  @include btn ($color-0, $color-2);
+  box-sizing: border-box;
+  float: right;
+  width: 29%;
+  clear: both;
+  z-index: 100;
+  pointer-events: all;
+}
+
+.grippie { display: none;}
+
+#edit-submitted-privacy-policy-1 {
+  @extend %form-field-reset;
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: -4px;
+  border: 1px solid $grey-d;
+  z-index: 100;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked {
+    &:after {
+      @include after('', block, absolute, 2px, 0, 7px, 14px);
+      border-bottom: 2px solid $grey-4;
+      border-right: 2px solid $grey-4;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+.form-item-submitted-privacy-policy {
+
+  width: 15px;
+  height: 15px;
+  float: left;
+
+  label { display: none;}
+}
+
+#webform-component-privacy-policy {
+  height: 15px !important;
+  position: absolute;
+  width: 15px;
+  bottom: 13px;
+  right: 63.2%;
+  pointer-events: all;
+
+  label {
+    display: none;
+  }
+}
+
+#edit-submitted-privacy-policy {
+  label {
+    width: 450px;
+    top: 0;
+    left: 21px;
+    font-size: 16px;
+  }
+}
+
+.page-node-1709 {
+
+  .region-content {
+    position: relative;
+    display: block;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  #block-system-main {
+    position: absolute;
+    width: 35%;
+    bottom: -7px;
+    left: 37%;
+
+    p { color: $grey-9; font-size: 16px;}
+
+    a {
+      color: $grey-9;
+      text-decoration: none;
+
+      &:hover { text-decoration: underline;}
+    }
+
+    &.block-system.error {
+
+      background: none;
+
+      p,
+      a {
+        color: #f00;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1120px) {
+  #block-webform-client-block-568 h2 { font-size: 64px;}
+
+  #edit-submitted-privacy-policy { font-size: 12px;}
+
+  label { font-size: 16px;}
+
+  .page-node-1709 #block-system-main p { font-size: 16px;}
+
+  #block-webform-client-block-568 h2 { width: 98%;}
+
+  #webform-client-form-568,
+  #user-login { width: 98%;}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+  #block-webform-client-block-568 h2 { margin-left: 2%;}
+
+  #webform-client-form-568,
+  #user-login {
+    margin: 0 2%;
+    width: 96%;
+
+    #webform-component-name-and-surname,
+    #webform-component-e-mail,
+    #webform-component-website,
+    #webform-component-subject,
+    #webform-component-message {
+      width: 100%;
+    }
+
+    #webform-component-message {
+      margin-bottom: 0;
+    }
+
+    #edit-submit {
+      margin-top: 20px;
+    }
+  }
+
+  #webform-component-privacy-policy {
+    right: auto;
+    bottom: 14px;
+  }
+
+  .page-node-1709 {
+
+    #block-system-main {
+      position: absolute;
+      width: 60%;
+      bottom: -7px;
+      left: 24px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  #webform-client-form-568 {
+    width: 96%;
+  }
+
+  .page-node-1709 #block-system-main {
+    bottom: -18px;
+    width: 60% !important;
+    left: 20px;
+  }
+
+  #webform-component-privacy-policy {
+    right: auto;
+  }
+
+  #webform-client-form-568 #webform-component-name-and-surname,
+  #webform-client-form-568 #webform-component-e-mail,
+  #webform-client-form-568 #webform-component-website,
+  #webform-client-form-568 #webform-component-message,
+  #user-login #webform-component-message,
+  #webform-client-form-568 #webform-component-subject
+  #webform-client-form-568 #edit-submitted-subject {
+    width: 100% !important;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+

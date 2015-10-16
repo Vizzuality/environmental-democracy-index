@@ -1,0 +1,47 @@
+<div class="grid-6 offset-1 small-grid-100">
+  <div class="mod-ranking">
+    <table class="ranking-table">
+      <tr class="ranking-legend">
+        <td class="rank">RANK</td>
+        <td class="country-legend">COUNTRY</td>
+        <td class="score">SCORE</td>
+        <td class="practice">PRACTICE</td>
+      </tr>
+      {{#each dataRanking}}
+      {{#if rank}}
+        <tr class="country {{scoreClass}}" data-iso="{{field_iso}}">
+          <td class="rank">{{rank}}</td>
+          {{#if federal}}
+          <td><a href="/country/{{field_iso}}">{{country}}*</a></td>
+          {{else}}
+          <td><a href="/country/{{field_iso}}">{{country}}</a></td>
+          {{/if}}
+          <td class="score">{{score}}</td>
+          <td>
+            <div class="mod-pie practice-indicators-pie csspinner" data-radius=0></div>
+          </td>
+        </tr>
+      {{else}}
+      <tr class="country-average">
+        <td class="rank">{{rank}}</td>
+        <td class="average">{{country}}</td>
+        <td class="score average">{{score}}</td>
+        <td></td>
+      </tr>
+      {{/if}}
+      {{/each}}
+    </table>
+  </div>
+</div>
+
+{{!-- <div class="grid-5 small-grid-12">
+  <div class="ranking-description-wrapper">
+    <div class="ranking-description">
+      <h4>{{title}}</h4>
+      <p>{{description}}</p>
+      <button id="view-map" class="btn-view-map">CHECK IT ON THE MAP</button>
+    </div>
+    <input type="submit" value="go to top" class="btn-go-to">
+  </div>
+</div>
+ --}}

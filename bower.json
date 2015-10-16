@@ -1,0 +1,33 @@
+{
+  "name": "environmental-democracy-index",
+  "version": "1.0.0",
+  "authors": [
+    "Vizzuality"
+  ],
+  "description": "Discover examples of good practice from around the world to strengthen your country's laws.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "sites/all/themes/edi/vendor"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3",
+    "normalize-css": "~3.0.1",
+    "requirejs": "~2.1.14",
+    "handlebars": "3.0.3",
+    "requirejs-text": "~2.0.12",
+    "d3-amd": "~3.3.9",
+    "underscore.string": "~2.3.3",
+    "backbone": "~1.1.2",
+    "underscore": "~1.6.0",
+    "jquery-validation": "~1.13.0",
+    "select2": "~3.5.1",
+    "domReady": "~2.0.1",
+    "almond": "~0.3.1"
+  },
+  "resolutions": {
+    "handlebars": "3.0.3"
+  }
+}

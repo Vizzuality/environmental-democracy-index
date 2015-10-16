@@ -1,0 +1,265 @@
+@mixin grid($column) {
+  width: 100%/$grid-columns*$column - (2*$grid-gutter-width);
+}
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin after($content, $display, $position, $right, $bottom, $width, $height) {
+  content: $content;
+  display: $display;
+  position: $position;
+  right: $right;
+  bottom: $bottom;
+  width: $width;
+  height: $height;
+}
+
+@mixin arrow ($width, $color, $border-width, $deg, $right, $bottom) {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: $right;
+    bottom: $bottom;
+    width: $width;
+    height: $width;
+    border-top: $border-width solid $color;
+    border-left: $border-width solid $color;
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+    pointer-events: none;
+  }
+}
+
+@mixin before($content, $display, $position, $left, $top, $width, $height) {
+  content: $content;
+  display: $display;
+  position: $position;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: $height;
+}
+
+@mixin btn ($color, $bg-color) {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: $color;
+  background-color: $bg-color;
+
+  &:hover { background-color: darken($bg-color, 5);}
+
+  @media screen and (max-width: 640px) {
+    padding: 8px 14px;
+  }
+}
+
+@mixin circle ($diameter, $color, $border-width, $circle-color, $circle-type) {
+  box-sizing: border-box;
+  width: $diameter;
+  height: $diameter;
+  line-height: $diameter;
+  text-align: center;
+  border-radius: 50%;
+  color: $color;
+
+  @if ($circle-type == solid) {
+    background-color: $circle-color;
+  } @else if ($circle-type == border) {
+    border: $border-width solid $circle-color;
+  } @else if ($circle-type == circle-with-border){
+    border: $border-width solid $circle-color;
+    background-color: $color;
+  }
+}
+
+@mixin cross ($width, $height, $color, $rotate, $content-width, $content-height) {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: ($content-width/2 - $width/2 + 1);
+    top: ($content-width/2 - $height/2);
+    width: $width;
+    height: $height;
+    background-color: $color;
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: ($content-width/2 - $height/2 + 1);
+    top: ($content-width/2 - $width/2);
+    height: $width;
+    width: $height;
+    background-color: $color;
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+  }
+}
+
+@mixin dash ($width, $height, $color, $content-width, $content-height) {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: ($content-width/2 - $width/2);
+    top: ($content-width/2 - $height/2);
+    width: $width;
+    height: $height;
+    background-color: $color;
+  }
+}
+
+@mixin equi-triangle ($width, $color) {
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $width solid $color;
+}
+
+@mixin fade ($color, $height) {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: $height;
+    right: 0;
+    z-index: 100;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $color), color-stop(1, rgba($color, 0)));
+    background-image: -o-linear-gradient(bottom, $color 0, rgba($color, 0) 100%);
+    background-image: -moz-linear-gradient(bottom, $color 0, rgba($color, 0) 100%);
+    background-image: -webkit-linear-gradient(bottom, $color 0, rgba($color, 0) 100%);
+    background-image: -ms-linear-gradient(bottom, $color 0, rgba($color, 0) 100%);
+    background-image: linear-gradient(to bottom, $color 0, rgba($color, 0) 100%);
+    pointer-events: none;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: $height;
+    left: 0;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $color), color-stop(1, rgba($color, 0)));
+    background-image: -o-linear-gradient(top, $color 0, rgba($color, 0) 100%);
+    background-image: -moz-linear-gradient(top, $color 0, rgba($color, 0) 100%);
+    background-image: -webkit-linear-gradient(top, $color 0, rgba($color, 0) 100%);
+    background-image: -ms-linear-gradient(top, $color 0, rgba($color, 0) 100%);
+    background-image: linear-gradient(to top, $color 0, rgba($color, 0) 100%);
+    pointer-events: none;
+    bottom: -1px;
+  }
+}
+
+// @mixin font-face ($font-family, $url-eot, $url-woff, $url-tff, $url-svg, $font-weight, $font-style) {
+//   @font-face {
+//     font-family: $font-family;
+//     src: url($url-eot);
+//     src: url($url-woff) format('woff'), url($url-tff)  format('truetype'), url($url-svg) format('svg');
+//     font-weight: $font-weight;
+//     font-style: $font-style;
+//   }
+// }
+
+//Fonts includer
+@mixin font-face($font-name, $font-file, $font-weight) {
+  @font-face {
+    font-family: $font-name;
+    src: url("../fonts/#{$font-file}.eot");
+    src: url("../fonts/#{$font-file}.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/#{$font-file}.woff") format("woff"),
+         url("../fonts/#{$font-file}.ttf") format("truetype"),
+         url("../fonts/#{$font-file}.svg") format("svg");
+    font-weight: $font-weight;
+  }
+}
+
+@mixin form-field-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  background: none;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin form-input ($bg-color, $border, $padding) {
+  padding: $padding;
+  border: 1px solid $border;
+  border-radius: 5px;
+  background-color: $bg-color;
+}
+
+@mixin iso-triangle ($width, $color) {
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: 2*$width solid $color;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content}
+  &:-moz-placeholder { @content}
+  &::-moz-placeholder { @content}
+  &:-ms-input-placeholder { @content}
+}
+
+@mixin search ($content-width, $content-height, $circle-diametre, $dash-width, $top, $bottom, $right, $left, $color) {
+  width: $content-width;
+  height: $content-height;
+  z-index: 12;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $circle-diametre;
+    height: $circle-diametre;
+    border: $dash-width solid $color;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: $dash-width;
+    height: $circle-diametre;
+    background-color: $color;
+    pointer-events: none;
+  }
+}
+
+
+

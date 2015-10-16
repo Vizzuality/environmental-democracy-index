@@ -1,0 +1,20 @@
+<div class="mod-map-breadcrumbs">
+  <a href="/ranking#{{url}}">
+    {{#if all}}
+    <div>
+     <span>Pillar:</span><p>OVERALL</p>
+    </div>
+    {{/if}}
+
+    {{#if pillar}}
+    <div>
+     <span>Pillar {{number}}:</span><p>{{pillar.title}}</p>
+    </div>
+    {{/if}}
+    {{#if guideline}}
+    <div>
+      <span>Guideline {{guideline.id}}:</span><p>{{guideline.name}}</p>
+    </div>
+    {{/if}}
+  </a>
+</div>

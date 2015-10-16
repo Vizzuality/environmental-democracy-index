@@ -1,0 +1,33 @@
+#block-views-our-partners-block {
+  margin: 35px 0;
+  .view-our-partners {
+    @extend .row;
+  }
+
+  .partner-image {
+    @extend .grid-2;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   #block-views-our-partners-block .partner-image  {
+    width: 23%;
+  }
+
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+   #block-views-our-partners-block .partner-image  {
+    width: 31.3%;
+  }
+
+}

@@ -1,0 +1,262 @@
+.leaflet-control-container {
+
+  .leaflet-control { margin: 15px 15px 0 0;}
+
+  .leaflet-top { top: 90px;}
+
+  .leaflet-bar {
+    height: 75px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+    border-radius: 0;
+
+    a {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 0;
+      font-size: 0;
+      border-bottom: 0;
+
+      &:first-child {
+        box-shadow: 0 5px 0 0 rgba(0, 0, 0, .1);
+      }
+
+      &:last-child {
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  .leaflet-control-zoom-in {
+    @include cross (10px, 2px, $color-00, 0, 35px, 35px);
+    position: relative;
+
+    &:after { left: 13px;}
+    &:before { left: 17px;}
+  }
+
+  .leaflet-control-zoom-out {
+    @include dash (10px, 2px, $color-00, 35px, 35px);
+    position: relative;
+  }
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: 0;
+}
+
+.country-search-view {
+  @include search (34px, 34px, 8px, 2px, auto, 8px, 10px, auto, $grey-4);
+  position: absolute;
+  right: 16px;
+  top: 55px;
+  overflow: hidden;
+  //border: 5px solid rgba($grey-4, .3);
+  background-color: $color-0;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+  -webkit-transition: width .3s ease-out .3s;
+  transition: width .3s ease-out .3s;
+  z-index: 9999;
+
+
+  &:before {
+    bottom: 13px;
+    right: 11px;
+  }
+
+  &:hover,
+  &.is-active {
+    width: 250px;
+    z-index: 9999;
+
+    -webkit-transition: width .3s ease-out 0;
+    transition: width .3s ease-out 0;
+
+    input {
+      opacity: 1;
+      width: 80%;
+
+      -webkit-transition: opacity .3s ease-out .3s;
+      transition: opacity .3s ease-out .3s;
+    }
+  }
+
+  input {
+    @extend %form-field-reset;
+    position: absolute;
+    left: 0;
+    width: 80%;
+    opacity: 0;
+    padding: 5px;
+
+    -webkit-transition: opacity .3s ease-out 0;
+    transition: opacity .3s ease-out 0;
+  }
+}
+
+.share-map {
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 34px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+  background: $color-0;
+
+  -webkit-transition: width .3s ease-out;
+  transition: width .3s ease-out;
+
+  &:after {
+    @include after('', block, absolute, 0, 0, 35px, 35px);
+    background: url('../images/icons/icon-rrss-hover.png') no-repeat center, $color-0;
+    background-size: 20px;
+  }
+
+  &:hover {
+    width: 200px;
+
+    .mod-social-share {
+      opacity: 1;
+
+      -webkit-transition: opacity .3s ease-out .3s;
+      transition: opacity .3s ease-out .3s;
+      z-index: 9999;
+    }
+  }
+
+  .mod-social-share {
+    @extend %centery;
+    opacity: 0;
+    float: left;
+    width: 100%;
+    margin-top: 1px;
+    margin-right: 0;
+    margin-left: 2%;
+    padding-top: 0;
+    color: $grey-4;
+    -webkit-transition: opacity 0 ease-out 0;
+    transition: opacity 0 ease-out 0;
+  }
+}
+
+a.social-share-twitter { background: url('../images/icons/icon-tw.png') no-repeat center;}
+
+a.social-share-facebook { background: url('../images/icons/icon-fb.png') no-repeat center;}
+
+a.social-share-digg { background: url('../images/icons/icon-dg.png') no-repeat center;}
+
+a.social-share-delicious { background: url('../images/icons/icon-dl.png') no-repeat center;}
+
+.ui-state-focus { background-color: rgba(0, 0, 0, .1);}
+
+.map-tools {
+  position: absolute;
+  right: 15px;
+  z-index: 100;
+  top: 200px;
+  width: 35px;
+
+}
+
+.legend {
+  box-sizing: border-box;
+  width: 35px;
+  padding: 8px;
+  background-color: $color-0;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+
+  a {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: default;
+  }
+
+  .score-1,
+  .score-2,
+  .score-3,
+  .score-4 ,
+  .no-data {
+    position: relative;
+    height: 30px;
+  }
+
+  .legend-info {
+    height: 20px;
+  }
+
+  .legend-info-btn {
+    @include circle (20px, $color-0, 1px, rgba($color-2, .5), circle-with-border);
+    position: static;
+    margin-top: 8px;
+    text-decoration: none;
+    color: $grey-4;
+  }
+
+  .score-1 { background-color: $color-12;}
+
+  .score-2 { background-color: $color-11;}
+
+  .score-3 { background-color: $color-10;}
+
+  .score-4 { background-color: $color-1;}
+
+  .no-data { background-color: $grey-9;}
+}
+
+.page-node-1705 .ui-autocomplete {
+  position: relative;
+  z-index: 1000;
+  margin-top: 2px;
+  width: 190px !important;
+  background-color: $grey-e;
+  border: 5px solid rgba($grey-4, .3);
+  border-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .share-map {
+
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+
+    .mod-social-share {
+      transition-delay: 1.5s;
+      -webkit-transition-delay: 1.5s;
+    }
+
+    &:hover {
+       transition-delay: 0;
+       -webkit-transition-delay: 0;
+
+       .mod-social-share {
+         transition-delay: 0;
+         -webkit-transition-delay: 0;
+       }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  //.legend { display: none;}
+  .leaflet-control-container .leaflet-top,
+  .map-tools,
+  .country-search-view {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+

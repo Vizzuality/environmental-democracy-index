@@ -1,0 +1,110 @@
+/*
+ * jQuery Chachi Slider v2.0.0
+ * Free to use and abuse.
+ * https://github.com/davidsingal/chachi-chachi-slider
+ */
+
+.chachi-slider {
+  position: relative;
+  height: 100%;
+}
+.chachi-slide-item > img {
+  display: none;
+}
+.chachi-html-caption {
+  display: none;
+}
+.chachi-slide-item {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  -webkit-transition: opacity .3s ease;
+  -moz-transition: opacity .3s ease;
+  -ms-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+.chachi-slide-item.current {
+  opacity: 1;
+  z-index: 1;
+}
+.chachi-slide-next, .chachi-slide-prev {
+  display: block;
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+}
+.chachi-slide-next {
+  right: 0;
+}
+.chachi-slide-prev {
+  left: 0;
+}
+
+
+/*
+ *
+ * Overrides
+ *
+ */
+
+#block-block-17 {
+
+}
+
+/*#block-views-splash-block {
+  position: absolute;
+  top: 0;
+  bottom: 290px;
+  left: 0;
+  right: 0;
+  background-color: red;
+}*/
+
+#block-views-splash-block .content {
+  height: 100%;
+}
+
+.chachi-slide-prev, .chachi-slide-next {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-top: 2px solid #444;
+  border-left: 2px solid #444;
+  font-size: 0px;
+}
+
+.chachi-slide-prev {
+  position: absolute;
+  left: 50px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.chachi-slide-next {
+  right: 50px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+
+@media screen and (max-width: 640px) {
+  .chachi-slide-prev, .chachi-slide-next  {
+    width: 20px;
+    height: 20px;
+  }
+
+  .chachi-slide-prev { left: 15px;}
+
+  .chachi-slide-next { right: 15px;}
+}
+
+
+
+

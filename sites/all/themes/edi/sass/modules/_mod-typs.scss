@@ -1,0 +1,163 @@
+.mod-typs {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 35px 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  border: 1px solid $grey-d;
+  background-color: $grey-f8;
+
+  h3 {
+    margin: 0;
+    width: 75%;
+  }
+
+  .doing-well {
+    background: url('../images/icons/icon-good.png') no-repeat right; background-size: 40px;
+  }
+
+  .recomendations {
+    background: url('../images/icons/icon-improvements.png') no-repeat right; background-size: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-2;
+    font-size: 19px;
+
+    &.btn-download {
+      color: $color-0;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+
+  .text-wrapper {
+    position: relative;
+    font-size: 19px;
+    line-height: 1.2em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 30px;
+
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+
+    p {
+      line-height: 1.2em;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background-color: $grey-f8;
+    }
+
+    &.is-clamped {
+      height: 19px*1.2*6; /* Fallback for non-webkit */
+      -webkit-line-clamp: 6;
+    }
+
+    .btn-read-more,
+    .btn-read-less {
+      @include form-field-reset;
+      font-size: 16px;
+      color: $color-2;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  .mod-main-content & {
+    padding-bottom: 95px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .mod-typs {
+    .text-wrapper {
+      line-height: 1.2em;
+      padding-bottom: 35px;
+
+      &.is-clamped {
+        height: 143px; /* Fallback for non-webkit */
+        -webkit-line-clamp: 6;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .mod-typs {
+    .text-wrapper {
+
+      &.is-clamped {
+        height: 16px*1.2*6; /* Fallback for non-webkit */
+        -webkit-line-clamp: 6;
+      }
+
+      padding-bottom: 25px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  h3 { font-size: 25px;}
+
+  .mod-typs {
+    .text-wrapper {
+      &.is-clamped {
+        height: 16px*1.2*6; /* Fallback for non-webkit */
+      }
+
+      padding-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mod-typs {
+
+    h3 {
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .text-wrapper {
+      &.is-clamped {
+        height: 16px*1*6; /* Fallback for non-webkit */
+      }
+    }
+
+    .recomendations {
+      width: 98%;
+
+      h3 {
+        width: 90%;
+      }
+    }
+
+    .doing-well {
+      h3 {
+        width: 80%;
+      }
+    }
+
+    .mod-main-content & {
+      &:first-child {
+        border-right: none;
+      }
+    }
+  }
+}

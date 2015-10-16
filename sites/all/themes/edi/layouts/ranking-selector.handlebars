@@ -1,0 +1,32 @@
+<div class="grid-5 small-grid-12">
+  <div class="mod-compare-widget">
+    <p>SELECT RANKING</p>
+    <button class="overall-btn">Show Overall</button>
+    <div class="select-wrapper">
+      <select class="select" id="select-pillar">
+        <option value="">Select a pillar</option>
+        {{#each pillars}}
+          <option value="{{number}}">PILLAR: {{short}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="select-wrapper">
+      <select class="select" id="select-guideline">
+        <option value="">Select a guideline</option>
+        {{#each guidelines}}
+          <option value="{{id}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    {{!-- <input type="submit" value="apply" class="btn-apply"> --}}
+  </div>
+
+  <div class="ranking-description-wrapper">
+    <div class="ranking-description">
+      <div class="description">
+      </div>
+      <button id="view-map" class="btn-view-map">CHECK IT ON THE MAP</button>
+    </div>
+    {{!-- <input type="submit" value="go to top" class="btn-go-to"> --}}
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.mod-article-detail {
+  h2 {
+    font-size: 64px;
+    margin-top: 20px;
+    line-height: 1em;
+  }
+
+  img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  p {
+    img {
+      width: auto !important;
+    }
+  }
+
+  .reference {
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 640px) {
+    h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+}

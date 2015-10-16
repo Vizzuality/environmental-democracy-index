@@ -1,0 +1,30 @@
+.mod-federal-disclaimer {
+  border: 1px solid $grey-d;
+  padding: 20px 0;
+
+  p {
+    position: relative;
+    box-sizing: border-box;
+    width: 100% !important;
+    display: inline-block;
+    padding: 0 40px 0 80px;
+    margin: 0;
+    font-size: 16px;
+
+    &:before {
+      content: '*';
+      display: inline-block;
+      color: $color-12;
+      font-size: 80px;
+      @extend %centery;
+      position: absolute;
+      left: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    p {
+      font-size: 14px;
+    }
+  }
+}

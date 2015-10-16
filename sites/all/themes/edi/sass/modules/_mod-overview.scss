@@ -1,0 +1,62 @@
+.mod-overview {
+  > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .country-detail {
+    height: auto;
+    border: 0;
+    margin-bottom: 2em;
+    margin-top: 0;
+  }
+
+  h2 {
+    text-align: center;
+    color: $grey-9;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+
+    a {
+      text-decoration: none;
+      color: $grey-9;
+    }
+  }
+
+  .score-1 {
+    border-color: $color-2;
+  }
+
+  .score-2 {
+    border-color: $color-10;
+  }
+
+  .score-3 {
+    border-color: $color-11;
+  }
+
+  .score-4 {
+    border-color: $color-12;
+  }
+
+  @media screen and (max-width: 640px) {
+    .country-detail {
+      border: 1px solid $grey-d;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    > ul {
+
+      > li {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

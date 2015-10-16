@@ -1,0 +1,77 @@
+<div class="mod-highlighted">
+  <div class="row">
+    <div class="grid-12">
+      <h1>{{country.name}}</h1>
+    </div>
+    <div class="grid-10 small-grid-12">
+      {{{country.description}}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="mod-country-detail is-stretch">
+      <div class="grid-4 medium-grid-6 small-grid-12 is-stretch">
+        <div class="country-detail country-score">
+          <div class="row">
+            <div class="overall-score">
+              <h3>COUNTRY SCORE</h3>
+              <div class="score {{scoreClassTemplate}}">
+                <svg
+                  viewBox="0 0 90 90"
+                  perserveAspectRatio="xMinYMid">
+                  <g>
+                    <circle r="40" cx="45" cy="45" fill="#ffffff" stroke={{scoreColorTemplate}} stroke-width="10"></circle>
+                    <text class="notranslate" x="45" y="55" fill="#000000" font-family="Segoe" font-size="30" text-anchor="middle">{{overallScore.score}}</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <h5>Pillars scores</h5>
+          <ul>
+            <li><p>Access to information</p><span class="pillar-score {{roundScores.score-1}}">{{pillarScores.score-1}}</span></li>
+            <li><p>Public participation</p><span class="pillar-score {{roundScores.score-2}}">{{pillarScores.score-2}}</span></li>
+            <li><p>Access to justice</p><span class="pillar-score {{roundScores.score-3}}">{{pillarScores.score-3}}</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-4 medium-grid-6 small-grid-12 is-stretch">
+        <div class="country-detail country-info">
+          <div class="population"><h4>Population</h4><span>{{country.population}}</span></div>
+          <div class="gdp"><h4> Income Level</h4><span>{{country.grp}}</span></div>
+          <div class="hdi">
+            <h4>Human Development Index</h4>
+            {{!-- <a href="#" title="Human Development Index" class="definition">?</a>--}}
+            <span>{{country.hdi}}</span>
+
+          </div>
+          <div class="epi">
+            <h4>Environmental Performance Index</h4>
+            {{!-- <a href="#" title="Environmental Performance Index" class="definition">?</a> --}}
+            <span>{{country.epi}}</span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-4 medium-grid-6 small-grid-12 is-stretch">
+        <div id="country-figure" class="country-detail country-figure mod-pie">
+          <h4>practice total scores</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {{#if country.data}}
+    <div class="download-data">
+        <div class="grid-5 offset-4 medium-grid-6 medium-offset-3" id="download"><a href="{{{country.data}}}" class="btn-download">DOWNLOAD DATA FOR THIS COUNTRY</a></div>
+    </div>
+    {{else}}
+    <div class="download-data">
+      <div class="grid-5 offset-4 medium-grid-6 medium-offset-3" id="download"><a href="{{defaultFile}}" class="btn-download">DOWNLOAD DATA</a></div>
+    </div>
+    {{/if}}
+  </div>
+
+</div>

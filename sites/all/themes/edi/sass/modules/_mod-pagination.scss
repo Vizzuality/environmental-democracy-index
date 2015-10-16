@@ -1,0 +1,30 @@
+.pager {
+  .pager-item {
+    margin: 0;
+  }
+
+  .pager-current {
+    margin: 0;
+  }
+
+  a,
+  .pager-previous a,
+  .pager-first  a {
+    color: $color-1;
+    font-weight: bold;
+    padding: 0 2px;
+    text-decoration: none;
+    border-bottom: 3px solid $color-1;
+  }
+
+  .pager-previous,
+  .pager-next,
+  .pager-last,
+  .pager-first {
+    margin: 0;
+
+    a {
+      border-bottom: 0;
+    }
+  }
+}

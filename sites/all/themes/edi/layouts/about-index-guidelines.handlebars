@@ -1,0 +1,18 @@
+
+<ul class="guidelines-tabs">
+  {{#each pillars}}
+    <li><a href="#{{number}}" class="tab-link">{{short}}</a></li>
+  {{/each}}
+</ul>
+{{#if guidelines}}
+  <ul class="guidelines-index">
+    {{#each guidelines}}
+      <li class="guidelines" data-id={{id}} id="guideline-{{id}}">
+        <a class="guideline" href="#"><span class="guideline-num">Guideline {{id}}: </span>"{{name}}"</a>
+        {{!-- <span class="score country-a">{{this.score}}</span>
+        <a href="#" class="rrss"></a> --}}
+        <a href="#" class="more-info more-info-guideline">?</a>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

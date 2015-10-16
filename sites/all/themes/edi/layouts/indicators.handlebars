@@ -1,0 +1,39 @@
+<div class="indicators">
+  {{#if indicatorsLaw}}
+  <div class="indicators-in-law">
+    <h4>INDICATORS: LAW</h4><a href="#" data-type="Law" class="more-info-type-indicator notranslate">?</a>
+    <ul>
+      {{#each indicatorsLaw}}
+          <li class="indicator" id="indicator-{{indicator-id}}" data-id="{{indicator-id}}" data-type="{{type}}" data-number="{{Number}}" data-url="{{../pillar}}/{{../guideline}}/{{indicator-id}}/{{type}}">
+            <p class="indicator-text"><span class="indicator-index">{{Number}}.</span>{{short}}</p>
+            <a href="#" class="more-info-indicator notranslate">?</a>
+          </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{else}}
+  <div class="indicators-in-law">
+    <h4>INDICATORS: LAW</h4><a href="#" data-type="Law" class="more-info-type-indicator notranslate">?</a>
+    <p class="no-indicators-message">No indicators law for this guideline</p>
+  </div>
+  {{/if}}
+
+  {{#if indicatorsPractice}}
+  <div class="indicators-in-practice is-hidden">
+    <h4>INDICATORS: PRACTICE</h4><a href="#" data-type="Practice" class="more-info-type-indicator notranslate">?</a>
+    <ul>
+      {{#each indicatorsPractice}}
+        <li class="indicator" id="indicator-{{indicator-id}}" data-id="{{indicator-id}}" data-type="{{type}}" data-number="{{Number}}" data-url="{{../pillar}}/{{../guideline}}/{{indicator-id}}/{{type}}">
+          <p class="indicator-text"><span class="indicator-index">{{Number}}.</span>{{short}}</p>
+          <a href="#" class="more-info-indicator notranslate">?</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{else}}
+  <div class="indicators-in-practice is-hidden">
+    <h4>INDICATORS: PRACTICE</h4><a href="#" data-type="Practice" class="more-info-type-indicator notranslate">?</a>
+    <p class="no-indicators-message">No indicators practice for this guideline</p>
+  </div>
+  {{/if}}
+</div>

@@ -1,0 +1,171 @@
+.mod-compare-countries {
+  margin-top: 20px;
+
+  .select-a-country {
+    @include form-input ($color-0, $grey-d, 0);
+    box-sizing: border-box;
+    height: 400px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .select-country-wrapper {
+    @include arrow (10px, $grey-9, 2px, -135deg, 5%, 20px);
+    @extend %border-1px;
+    height: 51px;
+    position: relative;
+  }
+
+  .country-figure-wrapper {
+    width: 100%;
+    height: 350px;
+    background: url('../images/select-country-bg.png') no-repeat center;
+  }
+
+  .country-figure {
+    height: 350px;
+
+    svg {
+      height: 350px;
+      width: 100%;
+    }
+  }
+
+  input {
+    @extend %form-field-reset;
+    @include form-input ($grey-4, $grey-4, 15px 15px);
+    text-transform: uppercase;
+    color: $color-0;
+  }
+
+  .country-figure-a path { fill: $grey-9;}
+  .country-figure-b path { fill: $grey-9;}
+  .country-figure-c path { fill: $grey-9;}
+}
+
+.btn-compare,
+.btn-print-compare {
+  @extend %form-field-reset;
+  @include btn ($color-0, $color-2);
+  width: 100%;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: $color-2;
+  }
+
+  &.disabled { background-color: $grey-b0;}
+}
+
+@media screen and (max-width: 960px) {
+  .mod-compare-countries {
+    .select-a-country { height: 350px;}
+
+    .country-figure-wrapper,
+    .country-figure {
+      height: 300px;
+
+      svg { height: 300px;}
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mod-compare-countries {
+    margin-bottom: 20px;
+
+    .select-a-country {
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .select-country-wrapper {
+      border-bottom: 0;
+    }
+
+    .country-figure-wrapper {
+      display: none;
+    }
+  }
+
+  .mod-compare-countries .country-selector {
+
+    &.countrya {
+      color: $color-2;
+    }
+
+    &.countryb {
+      color: $color-1;
+    }
+
+    &.countryc {
+      color: $grey-9;
+    }
+  }
+}
+
+
+@media print {
+
+  h1 { font-size: 35px;}
+
+  .layout-breadcrumbs,
+  .region-header,
+  .layout-footer {
+    display: none;
+  }
+
+  .layout-highlighted { border-bottom: 0 !important;}
+
+  .mod-compare-countries {
+    margin-top: 5em;
+
+    .select-a-country {  zoom: 90%;}
+  }
+
+  .country-figure { zoom: 90%;}
+
+  .layout-main-content {
+    .guidelines {
+      border-color: $grey-d !important;
+
+      &:before { display: none !important;}
+
+      .guideline {
+        font-size: 14px !important;
+        padding-left: 0 !important;
+
+        &:before { display: none !important;}
+        &:after { display: none !important;}
+      }
+    }
+
+    .indicators .indicator-title { background-color: $grey-4 !important;}
+  }
+
+  .mod-guidelines {
+    margin-top: 1em !important;
+    zoom: 90%;
+  }
+
+  .guideline-wrapper {
+    margin-top: 16em;
+    page-break-before: always !important;
+  }
+
+  .compare-scores {
+    -webkit-print-color-adjust: exact;
+    font-size: 12px !important;
+  }
+
+  .page-node-1708 {
+    .btn-compare,
+    .btn-print-compare,
+    .more-info ,
+    .more-info-type-indicator {
+      display: none !important;
+    }
+  }
+}
+
+

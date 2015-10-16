@@ -1,0 +1,40 @@
+.mod-legend {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  color: #999;
+  overflow: hidden;
+
+  .legend-score {
+    position: relative;
+    padding-left: 20px;
+    text-align: center;
+
+    span {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+
+    &.very-good span {
+      background-color: $color-1;
+    }
+
+    &.good span {
+      background-color: $color-10;
+    }
+
+    &.fair span {
+      background-color: $color-11;
+    }
+
+    &.poor span {
+      background-color: $color-12;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    font-size: 12px;
+  }
+}

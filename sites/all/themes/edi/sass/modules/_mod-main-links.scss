@@ -1,0 +1,74 @@
+.mod-main-links {
+  margin: 40px 0;
+  overflow: hidden;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+  }
+  li {
+    // display: flex;
+    // align-items: flex-end;
+    float: left;
+    position: relative;
+    width: 31%;
+    margin: 0 1%;
+    height: 210px;
+
+    &:first-child { background: url('../images/to-the-map.png') no-repeat center top;}
+
+    &:nth-child(2) { background: url('../images/to-the-rank.png') no-repeat center top;}
+
+    &:nth-child(3) { background: url('../images/to-the-compare.png') no-repeat center top;}
+
+  }
+  a {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 5px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: $grey-4;
+    background-color: $color-0;
+    border: 1px solid $grey-d;
+
+    //transition: .2s ease-in;
+
+    &:hover {
+      color: $color-0;
+      background-color: $color-1;
+      border-color: $color-1;
+    }
+
+  }
+}
+
+.views-label {
+  display: none;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .mod-main-links a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mod-main-links {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      width: 70%;
+      margin: 20px auto;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<div class="indicators">
+    {{#if indicatorsLaw}}
+    <div class="indicator-title">
+      <span>LAW</span>
+      <a href="#" data-type="Law" class="more-info-type-indicator notranslate">?</a>
+    </div>
+    <ul>
+      <ul class="indicators-index">
+      {{#each indicatorsLaw}}
+        <li class="indicator" data-number="{{indicatorNumber}}" data-type="{{type}}">
+          <p><span>Indicator {{indicatorNumber}}:</span>
+          {{indicatorText}}
+          </p>
+          <div class="more-info-and-rrss">
+            <a class="more-info more-info-indicator notranslate" href="#">?</a>
+            {{!-- <a href="#" class="rrss"></a> --}}
+          </div>
+          <div class="compare-scores">
+            {{#if scoreC}}
+              <span class="score score-{{scoreC}}">{{scoreC}}</span>
+            {{/if}}
+            {{#if scoreB}}
+              <span class="score score-{{scoreB}}">{{scoreB}}</span>
+            {{/if}}
+            {{#if scoreA}}
+              <span class="score score-{{scoreA}}">{{scoreA}}</span>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+      </ul>
+    {{/if}}
+    {{#if indicatorsPractice}}
+    <div class="indicator-title">
+      <span>PRACTICE</span>
+      <a href="#" data-type="Practice" class="more-info-type-indicator notranslate">?</a>
+    </div>
+    <ul>
+      <ul class="indicators-index">
+    {{#each indicatorsPractice}}
+        <li class="indicator" data-number="{{indicatorNumber}}" data-type="{{type}}">
+          <p><span>Indicator {{indicatorNumber}}:</span>
+          {{indicatorText}}
+          </p>
+          <div class="more-info-and-rrss">
+            <a class="more-info more-info-indicator notranslate" href="#">?</a>
+            {{!-- <a href="#" class="rrss"></a> --}}
+          </div>
+          <div class="compare-scores">
+            {{#if scoreC}}
+              <span class="score-practice score score-{{scoreC}}">{{scoreC}}</span>
+            {{/if}}
+            {{#if scoreB}}
+              <span class="score-practice score score-{{scoreB}}">{{scoreB}}</span>
+            {{/if}}
+            {{#if scoreA}}
+              <span class="score-practice score score-{{scoreA}}">{{scoreA}}</span>
+            {{/if}}
+          </div>
+        </li>
+    {{/each}}
+      </ul>
+    {{/if}}
+</div>

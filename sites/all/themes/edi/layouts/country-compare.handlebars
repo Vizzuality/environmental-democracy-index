@@ -1,0 +1,41 @@
+<div class="mod-compare-widget">
+  <div class="row">
+    <div class="grid-12">
+      <h3>Would you like to compare with other countries?</h3>
+    </div>
+  </div>
+
+  <form id="compare-form" action="/compare" method="get">
+    <div class="row">
+      <div class="grid-4 small-grid-12">
+        <div class="select-wrapper">
+          <select class="select" id="countryB" name="countryB">
+            <option value="" selected>SELECT A COUNTRY</option>
+            {{#if countries}}
+              {{#each countries}}
+                <option value="{{this.field_iso}}">{{this.country}}</option>
+              {{/each}}
+            {{/if}}
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-4 small-grid-12">
+        <div class="select-wrapper">
+          <select class="select" id="countryC" name="countryC">
+            <option value="" selected>SELECT A COUNTRY</option>
+            {{#if countries}}
+              {{#each countries}}
+                <option value="{{this.field_iso}}">{{this.country}}</option>
+              {{/each}}
+            {{/if}}
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-4 small-grid-12">
+        <input type="submit" value="compare" id="submit-compare" class="btn-compare disabled" disabled>
+      </div>
+    </div>
+  </form>
+</div>

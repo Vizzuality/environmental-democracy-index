@@ -1,0 +1,9 @@
+.mod-add {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1120px) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,14 @@
+.mod-breadcrumbs {
+  font-size: 13px;
+  color: $grey-7;
+
+  a {
+    font-size: 13px;
+    color: $grey-7;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline;}
+  }
+}
+
+

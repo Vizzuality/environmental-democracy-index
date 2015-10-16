@@ -1,0 +1,72 @@
+
+$font-family: 'Segoe';
+
+//greyscale
+$black: #000;
+
+@for $grey-number from 1 through 12 {
+  .grey-#{$grey-number} {
+    color: lighten($black, (100/12*$grey-number));
+  }
+}
+
+$grey-2: lighten($black, (100%/15*2));
+$grey-3: lighten($black, (100%/15*3));
+$grey-4: lighten($black, (100%/15*4));
+$grey-7: lighten($black, (100%/15*7));
+$grey-8: lighten($black, (100%/15*8));
+$grey-9: lighten($black, (100%/15*9));
+
+$grey-a: lighten($black, (100%/15*10));
+$grey-b: lighten($black, (100%/15*11));
+$grey-c: lighten($black, (100%/15*12));
+$grey-d: lighten($black, (100%/15*13));
+$grey-e: lighten($black, (100%/15*14));
+
+$grey-b0: #b0b0b0;
+$grey-d6: #d6d6d6;
+$grey-e6: #e6e6e6;
+$grey-f8: #f8f8f8;
+
+$grey-54: #545454;
+
+$grey: #f4f6f3;
+$white: #fff;
+
+
+//Colors
+$blue: #42A1DF;
+$dark-green: #9bb100;
+$lemon-green: #e4e924;
+$lemon-green-light: #e9f9c2;
+$light-green: #cdd87f;
+$light-solid-green: #eff2d6;
+$dark-orange: #fd7c1f;
+$light-orange: #fdbd1f;
+
+$light-blue: #ABD7F9;
+$light-yellow: #F8E969;
+$moutard: #E1BD08;
+
+$color-0: $white;
+$color-00: $black;
+$color-1: $blue;
+//$color-2: $moutard;
+$color-2: $blue;
+$color-3: $dark-orange;
+$color-4: $lemon-green;
+$color-5: $light-orange;
+$color-6: $grey;
+$color-7: $light-green;
+$color-8: $lemon-green-light;
+$color-9: $light-solid-green;
+
+$color-10: $light-blue;
+$color-11: $light-yellow;
+$color-12: $moutard;
+
+
+
+
+
+

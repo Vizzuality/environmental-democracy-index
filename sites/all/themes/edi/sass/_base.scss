@@ -1,0 +1,260 @@
+//Fonts
+// @include font-face('Segoe', '../fonts/segoe/segoe-regular/segoe-regular.eot', '../fonts/segoe/segoe-regular/segoe-regular.woff', '../fonts/segoe/segoe-regular/segoe-regular.ttf', '../fonts/segoe/segoe-regular/segoe-regular.svg', normal, normal);
+// @include font-face('Segoe', '../fonts/segoe/segoe-light/segoe-light.eot', '../fonts/segoe/segoe-light/segoe-light.woff', '../fonts/segoe/segoe-light/segoe-light.ttf', '../fonts/segoe/segoe-light/segoe-light.svg', lighter, normal);
+// @include font-face('Segoe', '../fonts/segoe/segoe-bold/segoe-bold.eot', '../fonts/segoe/segoe-bold/segoe-bold.woff', '../fonts/segoe/segoe-bold/segoe-bold.ttf', '../fonts/segoe/segoe-bold/segoe-bold.svg', bold, normal);
+
+@include font-face($font-family, "segoe-light", 200);
+@include font-face($font-family, "segoe-regular", 400);
+@include font-face($font-family, "segoe-bold", 600);
+
+body {
+  font-family: $font-family;
+  color: $grey-4;
+  min-height: 600px;
+}
+
+h1 {
+  margin: 0;
+  color: $color-1;
+  font-weight: lighter;
+  font-size: 80px;
+}
+
+h2 {
+  margin: 0;
+  color: $color-1;
+  font-weight: lighter;
+  font-size: 38px;
+}
+
+h3 {
+  margin: 0;
+  color: $color-1;
+  font-weight: lighter;
+  font-size: 29px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 19px;
+  font-weight: 200;
+
+  a {
+    color: $grey-4;
+  }
+}
+
+a,
+button,
+input {
+  font-weight: 200;
+}
+
+.caption,
+figcaption {
+  font-size: 12px;
+}
+
+// input {
+//   @include placeholder {
+//     font-weight: 200;
+//   }
+// }
+
+.color-title {
+  font-weight: lighter;
+  color: $color-1;
+  font-size: 29px;
+  margin: 0;
+}
+
+.italic {
+  font-weight: italic;
+}
+
+.menu,
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-item,
+.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+%border-1px { border-bottom: 1px solid $grey-d;}
+
+%center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+%centerx {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+%centery {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+%form-field-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  background: none;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.csspinner {
+  position: relative;
+
+  &:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .6;
+  }
+
+  &:after {
+    z-index: 2;
+    content: '';
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    -webkit-transition: all .75s ease 0s;
+    transition: all .75s ease 0s;
+    border-radius: 100%;
+    border-top: 4px solid #777;
+    border-right: 4px solid #777;
+    border-bottom: 4px solid #bbb;
+    border-left: 4px solid #999;
+    -webkit-animation: standard .75s infinite linear;
+    animation: standard .75s infinite linear;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+}
+
+@-webkit-keyframes standard {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes standard {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  @include form-input ($color-0, $grey-d6, 13px);
+  box-sizing: border-box;
+  width: 31.3%;
+  margin: 35px 1%;
+  display: block;
+  float: left;
+  color: $grey-4;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover { background-color: darken($color-0, 5);}
+
+  &.important {
+    background-color: $color-2;
+    color: $color-0;
+    border-color: $color-2;
+
+    &:hover { background-color: darken($color-2, 5);}
+  }
+}
+
+.general-button {
+  @extend %form-field-reset;
+  @include btn ($color-0, $grey-4);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 30px;
+  display: inline-block;
+  width: 31%;
+  margin-right: 1%;
+  box-sizing: border-box;
+  text-align: center;
+
+  &:hover {
+    border-color: $color-2;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  h1 { font-size: 64px;}
+
+  h2 { font-size: 34px;}
+
+  h4 { font-size: 16px;}
+
+  p { font-size: 16px;}
+
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    min-height: 0;
+  }
+  h1 { font-size: 40px;}
+}
+

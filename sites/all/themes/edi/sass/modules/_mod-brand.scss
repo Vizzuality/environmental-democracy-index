@@ -1,0 +1,17 @@
+.mod-brand {
+  margin-bottom: 15px;
+
+  @at-root {
+    #logo { display: inline-block;}
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mod-brand {
+    margin-bottom: 0;
+
+    img {
+      margin-top: 9px;
+    }
+  }
+}

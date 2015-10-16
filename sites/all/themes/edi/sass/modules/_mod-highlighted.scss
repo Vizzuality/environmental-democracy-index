@@ -1,0 +1,33 @@
+.mod-highlighted {
+  padding-bottom: 10px;
+
+  h2 { margin: 30px 0;}
+
+  p { padding-top: 0;}
+
+  h1 {
+    position: relative;
+    display: inline-block;
+  }
+
+  h1.is-updated:after {
+    content: "updated";
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    display: block;
+    font-size: 12px;
+    color: $grey-9;
+  }
+}
+
+#block-views-explanation-block {
+  p { width: 81.33%;}
+}
+
+
+@media screen and (max-width: 640px) {
+  #block-views-explanation-block {
+    p { width: 100%;}
+  }
+}

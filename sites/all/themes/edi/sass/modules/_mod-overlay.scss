@@ -1,0 +1,128 @@
+.mod-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000000;
+
+  .overlay-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color-00, .3);
+  }
+
+  .close {
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-decoration: none;
+
+    background: url('../images/icons/icon-close-overlay.svg') no-repeat center;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    font-size: 16px;
+
+    + p {
+      margin-top: 0;
+    }
+  }
+
+  .info-window {
+    @extend %center;
+    position: fixed;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 568px;
+    padding: 40px;
+    background-color: $color-0;
+  }
+
+  &.video {
+    .info-window {
+      width: auto;
+      min-width: 300px;
+
+      .video-wrapper {
+        background-color: $grey-d;
+        height: 315px;
+      }
+    }
+  }
+
+  .explanation-wrapper {
+    @include fade ($color-0, 15px);
+    position: relative;
+    height: 350px;
+
+    p {
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 1em
+    }
+  }
+
+  .explanation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    .question {
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  .mod-overlay {
+
+    .info-window {
+      width: 85%;
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .explanation-wrapper {
+      max-height: 180px;
+    }
+
+    .explanation {
+      max-height: 160px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

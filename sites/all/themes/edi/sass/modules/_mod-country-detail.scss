@@ -1,0 +1,275 @@
+.mod-country-detail {
+ .row {
+    max-width: 100%;
+    margin: 0 !important;
+  }
+
+  .country-detail {
+    @include form-input ($color-0, $grey-d, 20px 25px);
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+
+    &.country-info {
+      padding-top: 5px;
+    }
+
+    .page-node-1708 & {
+      border: 0;
+      margin-top: 0;
+      padding: 40px 20px;
+      min-height: 400px;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 19px;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .country-figure {
+    padding: 20px 40px;
+    min-height: 350px;
+  }
+
+  .overall-score {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .country-score {
+    h3 {
+      width: 55%;
+      margin: auto;
+      display: inline-block;
+      font-size: 19px;
+      font-weight: bold;
+      color: $grey-4;
+    }
+
+    h4 {
+      margin-top: 1em;
+      margin-bottom: .5em;
+    }
+
+    .score {
+      float: right;
+      position: relative;
+      font-weight: bold;
+      width: 40%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      display: inline-block;
+      position: relative;
+      top: -5px;
+    }
+
+    .pillar-score {
+      @include circle (50px, $grey-4, 5px, $grey-9, border);
+      display: block;
+      float: right;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 40px;
+
+      &.score-1 {
+        border-color: $color-12;
+      }
+
+      &.score-2 {
+        border-color: $color-11;
+      }
+
+      &.score-3 {
+        border-color: $color-10;
+      }
+
+      &.score-4 {
+        border-color: $color-2;
+      }
+    }
+  }
+
+  .more-info-definition {
+    @include circle (18px, $grey-4, 1px, $grey-4, border);
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: none;
+  }
+
+  .country-info {
+    padding-top: 5px;
+
+    div {
+      margin-bottom: 30px;
+      padding-left: 45px;
+
+      &:last-child { margin-bottom: 0;}
+    }
+
+    span {
+      display: block;
+      font-size: 19px;
+      font-weight: lighter;
+      line-height: 1em;
+    }
+
+    .definition {
+      @include circle (18px, #999, 1px, #fff, solid);
+      position: relative;
+      top: -3px;
+      left: 6px;
+      line-height: 16px;
+      display: inline-block;
+      text-decoration: none;
+      border: solid 1px #999;
+      cursor: help;
+    }
+
+    .epi { background: url('../images/icons/icon-epi.png') no-repeat left; background-size: 20px; min-height: 40px;}
+
+    .population { background: url('../images/icons/icon-population.png') no-repeat left; margin-top: 20px; min-height: 40px;}
+
+    .hdi { background: url('../images/icons/icon-hdi.png') no-repeat left; background-size: 25px; min-height: 40px;}
+
+    .gdp { background: url('../images/icons/icon-gdp.png') no-repeat left; background-size: 24px; min-height: 40px;}
+  }
+
+  .score-1 {
+    &circle {
+      stroke: $color-12;
+    }
+  }
+
+  .score-2 {
+    stroke: $color-11;
+  }
+
+  .score-3 {
+    &circle {
+      stroke: $color-10;
+    }
+  }
+
+  .score-4 {
+    &circle {
+      stroke: $color-1;
+    }
+  }
+}
+
+.btn-download,
+.btn-form {
+  @extend %form-field-reset;
+  @include btn($color-0, $grey-4);
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-form {
+  margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1120px) {
+  .mod-country-detail .country-score p {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .mod-country-detail {
+    .row {
+      margin: 0 !important;
+    }
+
+    .country-score h3 {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
+
+    .country-detail{
+      .page-node-1708 & {
+        padding: 10px;
+        min-height: 300px;
+      }
+    }
+  }
+
+  .country-detail .row {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mod-country-detail .country-figure {
+    padding: 20px;
+
+    .chart-legend {
+      transform: translate(-50%, -25%);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .country-detail {
+    margin-top: 0;
+  }
+
+  .mod-country-detail {
+    .country-score {
+      .row {
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .score {
+        width: 40%;
+      }
+    }
+    .country-detail {
+
+      &.country-score {
+        height: auto;
+      }
+    }
+
+    .country-figure {
+      padding-bottom: 30px;
+      min-height: 400px;
+
+      .chart-legend {
+          width: 30%;
+        }
+      }
+  }
+
+
+  .btn-download {
+    display: none;
+  }
+}
+

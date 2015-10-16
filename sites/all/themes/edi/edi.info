@@ -1,0 +1,29 @@
+name = Environmental Democracy Index Theme
+description = A custom template
+version = 1.0.0
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = lib/chachi-slider/chachi-slider.css
+stylesheets[all][] = lib/jquery-ui/jquery-ui.css
+stylesheets[all][] = vendor/select2/select2.css
+stylesheets[all][] = vendor/cartodb.js/themes/css/map/leaflet.css
+stylesheets[all][] = vendor/cartodb.js/themes/css/infowindow/cartodb-infowindow-default.css
+stylesheets[all][] = vendor/normalize-css/normalize.css
+stylesheets[all][] = vendor/select2/select2.css
+stylesheets[all][] = styles/main.css
+
+scripts[] = lib/jquery-mobile/jquery.mobile.custom.min.js
+scripts[] = vendor/requirejs/require.js
+scripts[] = scripts/main.js
+
+regions[top] = Top
+regions[header] = Header
+regions[country-search] = Country Search
+regions[social_share] = Social share
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Related content
+regions[sidebar_second] = Postscript
+regions[footer] = Footer

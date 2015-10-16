@@ -1,0 +1,19 @@
+<div class="chart-legend">
+  {{#if title}}
+    <p class="title">Practice indicator results</p>
+  {{/if}}
+  {{#if countryName}}
+    <a href="/country/{{this.iso}}"><p class="title">{{countryName}}</p></a>
+  {{/if}}
+  {{#if data}}
+    <div class="wrapper">
+    {{#each data}}
+      <p><span class="{{this.score}}"></span>{{this.code}}<span class='score'>{{this.count}}</span></p>
+    {{/each}}
+    </div>
+  {{else}}
+    <div class="wrapper">
+      <p>No data for this country</p>
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,9 @@
+<ul class="guidelines-index">
+  {{#each guidelines}}
+    <li class="guidelines" id="guideline-{{this.id}}" data-guideline="{{this.id}}">
+      <button data-pillar="{{this.pillar}}" data-guideline="{{id}}" class="open-guideline-btn"></button>
+      <a class="guideline" href="#{{this.pillar}}/{{this.id}}"><span class="guideline-number" >Guideline {{this.id}}:</span> {{this.name}}</a>
+      <a href="#" class="more-info more-info-guideline notranslate">?</a>
+    </li>
+  {{/each}}
+</ul>

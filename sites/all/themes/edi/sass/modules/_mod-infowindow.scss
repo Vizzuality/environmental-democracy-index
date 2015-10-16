@@ -1,0 +1,148 @@
+div.cartodb-popup {
+  box-sizing: border-box;
+  width: 210px;
+  padding: 19px 0 30px;
+  background: $color-0;
+}
+
+div.cartodb-infowindow {
+  margin-left: -73px;
+  margin-bottom: 10px !important;
+}
+
+.leaflet-container { font-family: $font-family;}
+
+.mod-infowindow {
+  z-index: 1;
+  width: 210px;
+  border: 1px solid $grey-d;
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  background-color: $color-0;
+
+  &:after {
+    @include equi-triangle (10px, $color-0);
+    content: ' ';
+    position: absolute;
+    bottom: -10px;
+    right: 95px;
+  }
+
+  &:before {
+    @include equi-triangle (12px, $grey-d);
+    content: ' ';
+    position: absolute;
+    bottom: -12px;
+    right: 93px;
+  }
+
+  h2 {
+    font-size: 23px;
+    font-weight: normal;
+    color: $color-1;
+    text-align: center;
+  }
+
+  a {
+    font-weight: 600;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .federal-info {
+    text-align: center;
+    font-weight: bold;
+
+    button {
+      @include form-field-reset;
+      @include circle (20px, $grey-4, 1px, $grey-9, border);
+      line-height: 15px;
+      position: relative;
+      top: 2px;
+      font-weight: 600;
+    }
+  }
+
+  .mod-infowindow-close {
+    @include cross (13px, 3px, $color-2, 45deg, 26px, 26px);
+    position: absolute;
+    top: -13px;
+    right: -12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid $grey-d;
+    background-color: $color-0;
+    text-decoration: none;
+  }
+
+  .close { font-size: 0;}
+
+  .score {
+    @include circle (77px, $grey-4, 10px, $grey-9, border);
+    @extend %centerx;
+    box-sizing: content-box;
+    margin: 19px 0 20px;
+    font-size: 32px;
+    display: inline-block;
+    font-weight: bold;
+
+    &.score-1 { border-color: $color-12;}
+    &.score-2 { border-color: $color-11;}
+    &.score-3 { border-color: $color-10;}
+    &.score-4 { border-color: $color-2;}
+
+    &:before {
+      @include circle (110px, $grey-e6, 3px, $grey-e6, border);
+      @extend %centerx;
+      content: '';
+      display: block;
+      position: absolute;
+      top: -17px;
+    }
+  }
+
+  .limited { font-size: 19px;}
+
+  .btn-view-more {
+    @include btn ($color-0, $color-2);
+    box-sizing: border-box;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    &.disabled {
+      background-color: $grey-d;
+    }
+  }
+
+  .no-data {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mod-infowindow .mod-infowindow-close {
+    border: 0;
+    background: url('../images/icons/icon-close-inf.svg') no-repeat center;
+    background-color: $color-0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    &:after { display: none;}
+
+    &:before { display: none;}
+  }
+
+}
+
+

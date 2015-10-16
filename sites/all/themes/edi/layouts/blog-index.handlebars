@@ -1,0 +1,14 @@
+<div class="row">
+  {{#each list}}
+    <div class="grid-3 small-grid-12">
+      <div class="mod-article">
+        <img src="{{this.Image.src}}" alt="{{this.image.alt}}">
+        <p class="post-title">{{this.title}}</p>
+        <p class="post-content">{{this.body}}</p>
+        <a href="{{this.link}}" class="btn-view-post">read more</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+

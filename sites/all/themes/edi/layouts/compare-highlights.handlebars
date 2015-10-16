@@ -1,0 +1,60 @@
+  <div class="mod-compare-countries">
+    <div class="row">
+
+      <div class="grid-4 small-grid-12">
+        <div class="compare-countries select-a-country">
+          <div class="select-country-wrapper">
+            <select class="country-selector countrya" id="countryA">
+              <option value="" >select a country</option>
+              {{#each countries}}
+                <option value="{{this.field_iso}}">{{this.country}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="country-figure-wrapper">
+            <div id="country-figureA" class="country-detail country-figure small-is-hidden country-figure-a" selector="countryA"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-4 small-grid-12">
+        <div class="compare-countries select-a-country">
+          <div class="select-country-wrapper">
+            <select class="country-selector countryb" id="countryB">
+              <option value="" >select a country</option>
+              {{#each countries}}
+                <option value="{{this.field_iso}}">{{this.country}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="country-figure-wrapper">
+           <div id="country-figureB" class="country-detail country-figure small-is-hidden country-figure-b" selector="countryB"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-4 small-grid-12">
+        <div class="compare-countries select-a-country">
+          <div class="select-country-wrapper">
+            <select class="country-selector countryc" id="countryC">
+              <option value="" >select a country</option>
+              {{#each countries}}
+                <option value="{{this.field_iso}}">{{this.country}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="country-figure-wrapper">
+            <div id="country-figureC" class="country-detail country-figure small-is-hidden country-figure-c" selector="countryC"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="grid-4 offset-4 small-grid-8 small-offset-2">
+        <button class="btn-compare disabled">compare</button>
+      </div>
+    </div>
+  </div>
+</div>

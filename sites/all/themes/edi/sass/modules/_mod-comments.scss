@@ -1,0 +1,42 @@
+.mod-comments {
+  padding-top: 40px;
+
+  h3,
+  p {
+    font-weight: normal;
+    color: $grey-9;
+  }
+
+  h3 { font-size: 20px;}
+
+  p {
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .comment-title {
+    margin-bottom: 0;
+    color: $grey-9;
+    font-weight: normal;
+  }
+
+  .leave-a-comment {
+    @extend %form-field-reset;
+    width: 100%;
+    margin-bottom: 45px;
+    margin-top: 35px;
+    padding-left: 10px;
+    min-height: 90px;
+    border: 1px solid $grey-d;
+
+    &[placeholder] { color: $grey-9;}
+  }
+
+  .more-comments {
+    @extend %form-field-reset;
+    @include btn ($color-0, $grey-9);
+    width: 75%;
+    margin: 0 12.5%;
+    text-transform: uppercase;
+  }
+}

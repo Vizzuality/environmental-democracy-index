@@ -1,0 +1,43 @@
+.view-blog-index {
+  position: relative;
+
+  .view-content {
+    @extend .row;
+
+    > ul {
+      @extend .grid-12;
+      list-style: none;
+      padding-left: 0;
+
+      &:before {
+        content: 'News';
+        position: relative;
+        top: 0;
+        left: 7px;
+        font-size: 80px;
+        font-weight: lighter;
+        color: $color-1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .view-content > ul:before {
+      font-size: 40px;
+    }
+  }
+}
+
+.page-blog {
+  .layout-main-header {
+    background: none;
+  }
+
+  h1 {
+    display: block;
+  }
+}
+
+.view-blog-index li:nth-child(4n + 1) {
+  clear: both;
+}

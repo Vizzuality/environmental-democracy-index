@@ -1,0 +1,30 @@
+<div class="indicators">
+    {{#if indicatorsLaw}}
+    <div class="indicator-title">
+      <span>LAW</span>
+      <a href="#" data-type="Law" class="more-info-type-indicator notranslate">?</a>
+    </div>
+    <ul class="indicators-index">
+      {{#each indicatorsLaw}}
+          <li class="indicator" data-id="{{indicator-id}}" data-type="{{type}}" data-number="{{Number}}">
+            <p class="indicator-text"><span class="indicator-index">{{Number}}.</span>{{Question}}</p>
+            <p class="description">{{description}}</p>
+          </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{#if indicatorsPractice}}
+    <div class="indicator-title">
+      <span>PRACTICE</span>
+      <a href="#" data-type="Practice" class="more-info-type-indicator notranslate">?</a>
+    </div>
+    <ul class="indicators-index">
+      {{#each indicatorsPractice}}
+        <li class="indicator" data-id="{{indicator-id}}" data-type="{{type}}" data-number="{{Number}}">
+          <p class="indicator-text"><span class="indicator-index">{{Number}}:</span>{{Question}}</p>
+          <p class="description">{{description}}</p>
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+</div>

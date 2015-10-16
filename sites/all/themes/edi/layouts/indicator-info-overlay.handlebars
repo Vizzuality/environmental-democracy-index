@@ -1,0 +1,49 @@
+<div id="overlay" class="mod-overlay">
+  <div class="overlay-bg"></div>
+  <div class="info-window">
+    <div class='close'></div>
+    <h2>Guideline {{guideline}}. Indicator {{id}}</h2>
+    <div class="explanation-wrapper">
+      <div class="explanation">
+
+        <h4>{{indicator}}</h4>
+
+        {{!-- {{#if description}}
+          <h5>Description: </h5>
+          <p>{{description}}</p>
+        {{/if}} --}}
+
+        {{#if authorComments}}
+          <h5>Author comments: </h5>
+          <p>{{authorComments}}</p>
+        {{/if}}
+
+        {{#if sources}}
+          <h5>Sources: </h5>
+          <p>{{sources}}</p>
+        {{/if}}
+
+        {{!-- {{#if privateDiscussions}}
+          <h5>Private discussions: </h5>
+          <p>{{privateDiscussions}}</p>
+        {{/if}} --}}
+
+        {{#if discussions}}
+          <h5>Discussions: </h5>
+          <p>{{discussions}}</p>
+        {{/if}}
+
+        {{#if reviewsComments}}
+          <h5>Reviewer comments: </h5>
+          <p>{{reviewsComments}}</p>
+        {{/if}}
+
+        {{#if comments}}
+          <h5>Comments: </h5>
+          <p>{{comments}}</p>
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+</div>
