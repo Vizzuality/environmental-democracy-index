@@ -68,6 +68,8 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <script type="text/javascript">window.liveSettings={api_key:"d592ddd9d5aa407cba2e613d24ff6bad",staging:true};</script>
+  <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
   <script src="http://libs.cartocdn.com/cartodb.js/v3/3.14/cartodb.js"></script>
   <?php print $scripts; ?>
 </body>
