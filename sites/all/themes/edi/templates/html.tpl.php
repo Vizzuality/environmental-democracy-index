@@ -48,7 +48,7 @@
 
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
+  <title>EDI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <?php print $styles; ?>
   <meta name="google-translate-customization" content="518cce9a63c1ccc5-c8bb1ff8f5ccff84-g4850c15c3c13de15-1f"></meta>
