@@ -5,12 +5,12 @@ define(['backbone', 'presenter'], function(Backbone, presenter) {
   var Router = Backbone.Router.extend({
 
     routes: {
-      '': 'toOverall',
-      'all' : 'overall',
-      ':pillar': 'pillar',
-      ':pillar/:guideline': 'guideline',
-      ':pillar/:guideline/:indicator': 'indicator',
-      ':pillar/:guideline/:indicator/:type': 'type'
+      '(/)': 'toOverall',
+      'all(/)' : 'overall',
+      ':pillar(/)': 'pillar',
+      ':pillar/:guideline(/)': 'guideline',
+      ':pillar/:guideline/:indicator(/)': 'indicator',
+      ':pillar/:guideline/:indicator/:type(/)': 'type'
     },
 
     toOverall: function() {

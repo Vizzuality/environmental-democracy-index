@@ -8,10 +8,10 @@ define([
   var RankingRouter = Backbone.Router.extend({
 
     routes: {
-      '' : 'toOverall',
-      'all' : 'overall',
-      ':pillar' : 'getRankingByPillar',
-      ':pillar/:guideline' : 'getRankingByGuideline'
+      '(/)' : 'toOverall',
+      'all(/)' : 'overall',
+      ':pillar(/)' : 'getRankingByPillar',
+      ':pillar/:guideline(/)' : 'getRankingByGuideline'
     },
 
     toOverall: function() {

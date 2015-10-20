@@ -7,7 +7,7 @@ define([
   var RouterCountry = Backbone.Router.extend({
 
     routes: {
-      'country/:iso' : 'getISO'
+      'country/:iso(/)' : 'getISO'
     },
 
     getISO: function(iso) {
