@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('testing');
-
 require.config({
 
   baseUrl: '/sites/all/themes/edi/scripts',
