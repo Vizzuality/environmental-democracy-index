@@ -1,6 +1,6 @@
 'use strict';
 
-alert('heueueu');
+console.log('testing');
 
 require.config({
 
