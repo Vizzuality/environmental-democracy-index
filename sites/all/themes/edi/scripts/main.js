@@ -1,5 +1,7 @@
 'use strict';
 
+alert('heueueu');
+
 require.config({
 
   baseUrl: '/sites/all/themes/edi/scripts',
