@@ -5,7 +5,7 @@ Requirements
 * [PHP 5.4+](http://www.php.net//manual/es/install.php)
 * [Ruby 1.9.3+](https://www.ruby-lang.org/en/downloads/)
 * [MySQL 5.5+](http://dev.mysql.com/doc/refman/5.5/en/installing.html)
-* [Drush](https://drupal.org/node/1791676)
+* [Drush](https://drupal.org/node/1791676) --> brew install homebrew/php/drush
 
 Install global dependencies
 
