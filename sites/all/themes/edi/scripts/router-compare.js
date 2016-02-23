@@ -8,8 +8,8 @@ define([
   var RouterCompare = Backbone.Router.extend({
 
     routes: {
-      ':countryA/:countryB': 'setCountries',
-      ':countryA/:countryB/:countryC': 'setCountries'
+      ':countryA/:countryB(/)': 'setCountries',
+      ':countryA/:countryB/:countryC(/)': 'setCountries'
     },
 
     setCountries: function(countryA, countryB, countryC) {
