@@ -619,8 +619,9 @@ li.country-overall-name {
   .more-info-definition,
   .more-info-indicator-law,
   .more-info-indicator-practice {
+    border: 0;
     @include circle (20px, $grey-4, 0, $color-0, solid);
-    line-height: 18px;
+    line-height: 16px;
     display: none;
     position: absolute;
     right: 19px;
@@ -651,7 +652,10 @@ li.country-overall-name {
 
   .indicator {
 
-    &.is-current .more-info-indicator { display: block;}
+    &.is-current .more-info-indicator { 
+      display: block;
+      border: 0;
+    }
 
     .more-info-indicator {
       top: 50%;
@@ -671,6 +675,7 @@ li.country-overall-name {
   .more-info-type-indicator,
   .more-info-definition {
     @include circle (24px, $grey-4, 0, $color-0, solid);
+    line-height: 16px;
     display: inline-block;
     background-color: $color-0;
     text-decoration: none;

@@ -109,6 +109,10 @@ input {
   font-weight: 200;
 }
 
+button {
+  border: 0;
+}
+
 .caption,
 figcaption {
   font-size: 12px;
@@ -3206,6 +3210,7 @@ li.country-overall-name {
 .mod-dashboard .more-info-definition,
 .mod-dashboard .more-info-indicator-law,
 .mod-dashboard .more-info-indicator-practice {
+  border: 0;
   box-sizing: border-box;
   width: 20px;
   height: 20px;
@@ -3214,7 +3219,7 @@ li.country-overall-name {
   border-radius: 50%;
   color: #444444;
   background-color: #fff;
-  line-height: 18px;
+  line-height: 16px;
   display: none;
   position: absolute;
   right: 19px;
@@ -3240,6 +3245,7 @@ li.country-overall-name {
 }
 .mod-dashboard .indicator.is-current .more-info-indicator {
   display: block;
+  border: 0;
 }
 .mod-dashboard .indicator .more-info-indicator {
   top: 50%;
@@ -3262,6 +3268,7 @@ li.country-overall-name {
   border-radius: 50%;
   color: #444444;
   background-color: #fff;
+  line-height: 16px;
   display: inline-block;
   background-color: #fff;
   text-decoration: none;
