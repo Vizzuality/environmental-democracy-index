@@ -2,7 +2,7 @@
   {{#if indicatorsLaw}}
     <div class="indicator-title">
       <span>LAW</span>
-      <a href="#" data-type="Law" class="more-info-type-indicator notranslate">?</a>
+      <button data-type="Law" class="more-info-type-indicator notranslate">?</button>
     </div>
     <ul class="indicators-index">
       {{#each indicatorsLaw}}
@@ -11,9 +11,8 @@
           {{this.indicatorText}}
           </p>
           <div class="more-info-and-rrss">
-            <a class="more-info more-info-indicator" href="#">?</a>
-            <a class="more-info more-info-btn notranslate" href="#" data="{{this.indicatorNumber}}" data-type="{{type}}">i</a>
-            {{!-- <a href="#" class="rrss"></a> --}}
+            <button class="more-info more-info-indicator">?</button>
+            <button class="more-info more-info-btn notranslate" data="{{this.indicatorNumber}}" data-type="{{type}}">i</button>
           </div>
           <span class="score score-{{this.score}}">{{this.score}}</span>
         </li>
@@ -23,7 +22,7 @@
   {{#if indicatorsPractice}}
     <div class="indicator-title">
       <span>PRACTICE</span>
-      <a href="#" data-type="Practice" class="more-info-type-indicator notranslate">?</a>
+      <button data-type="Practice" class="more-info-type-indicator notranslate">?</button>
     </div>
     <ul class="indicators-index">
       {{#each indicatorsPractice}}
@@ -32,9 +31,8 @@
           {{this.indicatorText}}
           </p>
           <div class="more-info-and-rrss">
-            <a class="more-info more-info-indicator" href="#">?</a>
-            <a class="more-info more-info-btn notranslate" href="#" data="{{this.indicatorNumber}}" data-type="{{type}}">i</a>
-            {{!-- <a href="#" class="rrss"></a> --}}
+            <button class="more-info more-info-indicator">?</button>
+            <button class="more-info more-info-btn notranslate" data="{{this.indicatorNumber}}" data-type="{{type}}">i</button>
           </div>
           <span class="score in-practice score-{{this.score}}">{{this.score}}</span>
         </li>

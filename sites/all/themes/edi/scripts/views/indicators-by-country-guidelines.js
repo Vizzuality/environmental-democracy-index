@@ -97,7 +97,7 @@ define([
     },
 
     showPopUp: function(e) {
-      e.preventDefault();
+      e && e.preventDefault();
 
       var self = this;
 
